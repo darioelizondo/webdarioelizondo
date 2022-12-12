@@ -1,0 +1,15 @@
+// @Config
+@import '@config/reset';
+@import '@config/fonts';
+@import '@config/variables';
+@import '@config/breakpoints';
+@import '@config/base';
+@import '@config/color';
+@import '@config/headings';
+
+// Atoms
+
+// Molecules
+@import 'molecules/animated-path-cover';
+
+// Organisms

@@ -3,8 +3,7 @@ document.addEventListener('DOMContentLoaded', animatedLogo, false );
 function animatedLogo() {
 
 	let pathEls = document.querySelectorAll( '.logo__path' );
-	let pathLetters = document.querySelector( '.logo__path-letters' );
-
+	let pathLetters = document.querySelectorAll( '.logo__path-letters' );
 	let animeLogo = anime.timeline({
 		easing: 'easeInOutSine',
   		duration: 1000,
@@ -14,9 +13,14 @@ function animatedLogo() {
 		targets: pathEls,
 		strokeDashoffset: [anime.setDashoffset, 0],
 		delay: (el, i) => { return i * 500 }
-	}).add({
-		targets: pathLetters,
-		translateY: [100, 0]
-	},'-=1300')
+	});
+
+	pathLetters.forEach( function(path) {
+		animeLogo.add({
+			targets: path,
+			translateY: [100, 0],
+			duration: 2000
+		},'-=1950');
+	});
 
 }

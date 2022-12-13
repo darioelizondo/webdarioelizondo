@@ -1,0 +1,18 @@
+.logo {
+	&__svg {
+		width: 160px;
+		height: 23px;
+		overflow: hidden;
+		@include l {
+			width: 200px;
+			height: 29px;	
+		}
+		@include xxl {
+			width: 210px;
+			height: 30px;	
+		}
+	}
+	&__path-letters {
+		// transform: translateY(150px);
+	}
+}

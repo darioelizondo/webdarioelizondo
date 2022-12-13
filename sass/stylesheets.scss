@@ -8,8 +8,10 @@
 @import '@config/headings';
 
 // Atoms
+@import 'atoms/logo';
 
 // Molecules
 @import 'molecules/animated-path-cover';
 
 // Organisms
+@import 'organisms/header';

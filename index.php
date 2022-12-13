@@ -14,6 +14,7 @@ get_header();
 if ( have_posts() ) : while ( have_posts() ) : the_post();
 
 	// require TD . '/parts/organisms/modules.php';
+    require TD . '/parts/organisms/header.php';
     require TD . '/parts/organisms/cover.php';
 
 endwhile;

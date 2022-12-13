@@ -617,6 +617,29 @@ body:before {
   }
 }
 
+/* line 2, sass/atoms/_logo.scss */
+.logo__svg {
+  width: 160px;
+  height: 23px;
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  /* line 2, sass/atoms/_logo.scss */
+  .logo__svg {
+    width: 200px;
+    height: 29px;
+  }
+}
+
+@media (min-width: 1700px) {
+  /* line 2, sass/atoms/_logo.scss */
+  .logo__svg {
+    width: 210px;
+    height: 30px;
+  }
+}
+
 @media (min-width: 1700px) {
   /* line 1, sass/molecules/_animated-path-cover.scss */
   .animated-path-cover {
@@ -634,5 +657,25 @@ body:before {
   /* line 6, sass/molecules/_animated-path-cover.scss */
   .animated-path-cover__svg {
     height: auto;
+  }
+}
+
+/* line 1, sass/organisms/_header.scss */
+.header {
+  padding: 26px 20px;
+  border-bottom: solid 1px rgba(252, 255, 107, 0.5);
+}
+
+@media (min-width: 1024px) {
+  /* line 1, sass/organisms/_header.scss */
+  .header {
+    padding: 26px 52px;
+  }
+}
+
+@media (min-width: 1700px) {
+  /* line 1, sass/organisms/_header.scss */
+  .header {
+    padding: 26px 78px;
   }
 }

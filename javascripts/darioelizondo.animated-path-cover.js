@@ -16,7 +16,8 @@ function animatedPathCover() {
 			loop: true,
 			direction: 'alternate',
 			easing: 'easeInOutSine',
-			autoplay: true
+			autoplay: true,
+			delay: 1500
 		});
 	})
 }

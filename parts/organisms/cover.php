@@ -7,9 +7,6 @@
  * 
  */ 
 
-wp_enqueue_script( 'anime.js' );
-wp_enqueue_script( 'darioelizondo.animated-path-cover' );
-
 ?>
 
 <div class="cover">

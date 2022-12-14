@@ -80,7 +80,7 @@ em {
 
 ul {
 	list-style: disc;
-	margin-left: $lh/1.5;
+	margin-left: calc( $lh / 1.5 );
 }
 
 strong {
@@ -89,7 +89,7 @@ strong {
 
 blockquote, q {
 	font-style: italic;
-	margin: $lh/2 0 $lh/2 $lh*1.3;
+	margin: calc( $lh / 2 ) 0 calc( $lh / 2 ) calc( $lh * 1.3 );
 }
 blockquote p:before,
 q p:before {

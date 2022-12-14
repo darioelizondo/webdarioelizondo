@@ -3,7 +3,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-/* line 6, sass/@config/_reset.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -26,100 +25,83 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-/* line 27, sass/@config/_reset.scss */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/* line 31, sass/@config/_reset.scss */
 body {
   line-height: 1;
 }
 
-/* line 34, sass/@config/_reset.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 37, sass/@config/_reset.scss */
 blockquote, q {
   quotes: none;
 }
 
-/* line 40, sass/@config/_reset.scss */
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
-/* line 45, sass/@config/_reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 51, sass/@config/_reset.scss */
 * {
   box-sizing: border-box;
 }
 
 @font-face {
-  font-family: 'Gibson';
+  font-family: "Gibson";
   src: url("../fonts/Gibson-SemiBold.woff2") format("woff2"), url("Gibson-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
-  font-family: 'Gibson';
+  font-family: "Gibson";
   src: url("../fonts/Gibson-Regular.woff2") format("woff2"), url("../fonts/Gibson-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
-  font-family: 'Gibson';
+  font-family: "Gibson";
   src: url("../fonts/Gibson-Medium.woff2") format("woff2"), url("../fonts/Gibson-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
-
-/* line 1, sass/@config/_base.scss */
 * {
   box-sizing: border-box;
   font-family: "Gibson", sans-serif;
   font-size: 14px;
   line-height: 22px;
 }
-
 @media (min-width: 1024px) {
-  /* line 1, sass/@config/_base.scss */
   * {
     font-size: 15px;
     line-height: 23px;
   }
 }
-
 @media (min-width: 1440px) {
-  /* line 1, sass/@config/_base.scss */
   * {
     font-size: 18px;
     line-height: 26px;
   }
 }
 
-/* line 15, sass/@config/_base.scss */
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
-/* line 20, sass/@config/_base.scss */
 body {
   color: #36385E;
   font-family: "Gibson", sans-serif;
@@ -130,24 +112,19 @@ body {
   position: relative;
 }
 
-/* line 31, sass/@config/_base.scss */
 p,
 ul {
   font-size: 14px;
   line-height: 22px;
 }
-
 @media (min-width: 1024px) {
-  /* line 31, sass/@config/_base.scss */
   p,
   ul {
     font-size: 15px;
     line-height: 23px;
   }
 }
-
 @media (min-width: 1440px) {
-  /* line 31, sass/@config/_base.scss */
   p,
   ul {
     font-size: 18px;
@@ -155,30 +132,23 @@ ul {
   }
 }
 
-/* line 45, sass/@config/_base.scss */
 a {
   color: inherit;
   text-decoration: none;
 }
 
-/* line 50, sass/@config/_base.scss */
 p a {
   text-decoration: underline;
-  -webkit-transition: color .3s ease;
-  transition: color .3s ease;
+  transition: color 0.3s ease;
 }
-
-/* line 53, sass/@config/_base.scss */
 p a:hover {
   color: #1D63FF;
 }
 
-/* line 58, sass/@config/_base.scss */
 input:focus-visible {
   outline: none;
 }
 
-/* line 62, sass/@config/_base.scss */
 h1,
 h2,
 h3,
@@ -188,149 +158,115 @@ h6 {
   font-family: "Gibson", sans-serif;
 }
 
-/* line 71, sass/@config/_base.scss */
 pre {
   background: #ffffff;
   color: #000000;
   font-family: monospace;
 }
 
-/* line 77, sass/@config/_base.scss */
 em {
   font-style: italic;
 }
 
-/* line 81, sass/@config/_base.scss */
 ul {
   list-style: disc;
-  margin-left: 17.33333px;
+  margin-left: 17.3333333333px;
 }
 
-/* line 86, sass/@config/_base.scss */
 strong {
   font-weight: 700;
 }
 
-/* line 90, sass/@config/_base.scss */
 blockquote, q {
   font-style: italic;
   margin: 13px 0 13px 33.8px;
 }
 
-/* line 94, sass/@config/_base.scss */
 blockquote p:before,
 q p:before {
-  content: '“';
+  content: "“";
 }
 
-/* line 99, sass/@config/_base.scss */
 blockquote p:after,
 q p:after {
-  content: '”';
+  content: "”";
 }
 
-/* line 104, sass/@config/_base.scss */
 button {
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
 
-/* line 110, sass/@config/_base.scss */
 button:focus {
   outline: none;
 }
 
-/* line 114, sass/@config/_base.scss */
-::-moz-selection {
-  color: #ffffff;
-  background: #1D63FF;
-}
 ::selection {
   color: #ffffff;
   background: #1D63FF;
 }
 
-/* line 121, sass/@config/_base.scss */
 .nowrap {
   white-space: nowrap;
 }
 
-/* line 125, sass/@config/_base.scss */
 .global-inner {
   margin: 0 auto;
   width: calc(100% - 40px);
 }
-
 @media (min-width: 640px) {
-  /* line 125, sass/@config/_base.scss */
   .global-inner {
     width: calc(100% - 104px);
   }
 }
-
 @media (min-width: 1024px) {
-  /* line 125, sass/@config/_base.scss */
   .global-inner {
     width: 960px;
   }
 }
-
 @media (min-width: 1440px) {
-  /* line 125, sass/@config/_base.scss */
   .global-inner {
     width: 1280px;
   }
 }
-
 @media (min-width: 1700px) {
-  /* line 125, sass/@config/_base.scss */
   .global-inner {
     width: 1400px;
   }
 }
 
 @media (min-width: 1024px) {
-  /* line 142, sass/@config/_base.scss */
   .d-mobile {
     display: none;
   }
 }
 
-/* line 148, sass/@config/_base.scss */
 .d-desktop {
   display: none;
 }
-
 @media (min-width: 1024px) {
-  /* line 148, sass/@config/_base.scss */
   .d-desktop {
     display: block;
   }
 }
 
-/* line 156, sass/@config/_base.scss */
 .image--fluid {
   max-width: 100%;
   height: auto;
 }
 
-/* line 161, sass/@config/_base.scss */
 .no--border {
   border: none;
 }
 
-/* line 165, sass/@config/_base.scss */
 body:before {
-  -webkit-box-align: center;
   align-items: center;
   background: black;
-  content: 'S';
+  content: "S";
   color: white;
-  display: -webkit-box;
   display: flex;
   height: 20px;
-  -webkit-box-pack: center;
   justify-content: center;
   position: fixed;
   right: 0;
@@ -338,261 +274,203 @@ body:before {
   width: 20px;
   z-index: 9999;
 }
-
 @media (min-width: 640px) {
-  /* line 165, sass/@config/_base.scss */
   body:before {
-    content: 'M';
+    content: "M";
   }
 }
-
 @media (min-width: 1024px) {
-  /* line 165, sass/@config/_base.scss */
   body:before {
-    content: 'L';
+    content: "L";
   }
 }
-
 @media (min-width: 1440px) {
-  /* line 165, sass/@config/_base.scss */
   body:before {
-    content: 'XL';
+    content: "XL";
   }
 }
-
 @media (min-width: 1700px) {
-  /* line 165, sass/@config/_base.scss */
   body:before {
-    content: 'XXL';
+    content: "XXL";
   }
 }
 
-/* line 2, sass/@config/_color.scss */
 .primary {
   color: #1D63FF;
 }
 
-/* line 5, sass/@config/_color.scss */
 .secondary {
   color: #FCFF6B;
 }
 
-/* line 8, sass/@config/_color.scss */
 .tertiary {
   color: #01FFFE;
 }
 
-/* line 11, sass/@config/_color.scss */
 .text {
   color: #36385E;
 }
 
-/* line 14, sass/@config/_color.scss */
 .soft-gray {
   color: #F5F8FF;
 }
 
-/* line 17, sass/@config/_color.scss */
 .white {
   color: #ffffff;
 }
 
-/* line 23, sass/@config/_color.scss */
 .bg--primary {
   background-color: #1D63FF;
 }
 
-/* line 26, sass/@config/_color.scss */
 .bg--secondary {
   background-color: #FCFF6B;
 }
 
-/* line 29, sass/@config/_color.scss */
 .bg--tertiary {
   background-color: #01FFFE;
 }
 
-/* line 32, sass/@config/_color.scss */
 .bg--text {
   background-color: #36385E;
 }
 
-/* line 35, sass/@config/_color.scss */
 .bg--soft-gray {
   background-color: #F5F8FF;
 }
 
-/* line 1, sass/@config/_headings.scss */
 .heading--1 {
   font-size: 38px;
   line-height: 38px;
   font-weight: 500;
 }
-
 @media (min-width: 1024px) {
-  /* line 1, sass/@config/_headings.scss */
   .heading--1 {
     font-size: 45px;
     line-height: 45px;
   }
 }
-
 @media (min-width: 1440px) {
-  /* line 1, sass/@config/_headings.scss */
   .heading--1 {
     font-size: 48px;
     line-height: 48px;
   }
 }
-
 @media (min-width: 1700px) {
-  /* line 1, sass/@config/_headings.scss */
   .heading--1 {
     font-size: 60px;
     line-height: 60px;
   }
 }
 
-/* line 18, sass/@config/_headings.scss */
 .heading--2 {
   font-size: 28px;
   line-height: 34px;
   font-weight: 500;
 }
-
 @media (min-width: 1024px) {
-  /* line 18, sass/@config/_headings.scss */
   .heading--2 {
     font-size: 32px;
     line-height: 38px;
   }
 }
-
 @media (min-width: 1440px) {
-  /* line 18, sass/@config/_headings.scss */
   .heading--2 {
     font-size: 38px;
     line-height: 38px;
   }
 }
-
 @media (min-width: 1700px) {
-  /* line 18, sass/@config/_headings.scss */
   .heading--2 {
     font-size: 42px;
     line-height: 42px;
   }
 }
 
-/* line 35, sass/@config/_headings.scss */
 .heading--3 {
   font-size: 24px;
   line-height: 30px;
   font-weight: 400;
 }
-
 @media (min-width: 1024px) {
-  /* line 35, sass/@config/_headings.scss */
   .heading--3 {
     font-size: 28px;
     line-height: 34px;
   }
 }
-
 @media (min-width: 1440px) {
-  /* line 35, sass/@config/_headings.scss */
   .heading--3 {
     font-size: 32px;
     line-height: 38px;
   }
 }
-
 @media (min-width: 1700px) {
-  /* line 35, sass/@config/_headings.scss */
   .heading--3 {
     font-size: 36px;
     line-height: 42px;
   }
 }
 
-/* line 52, sass/@config/_headings.scss */
 .heading--4 {
   font-size: 20px;
   line-height: 26px;
   font-weight: 900;
 }
-
 @media (min-width: 1024px) {
-  /* line 52, sass/@config/_headings.scss */
   .heading--4 {
     font-size: 22px;
     line-height: 28px;
   }
 }
-
 @media (min-width: 1440px) {
-  /* line 52, sass/@config/_headings.scss */
   .heading--4 {
     font-size: 24px;
     line-height: 30px;
   }
 }
-
 @media (min-width: 1440px) {
-  /* line 52, sass/@config/_headings.scss */
   .heading--4 {
     font-size: 26px;
     line-height: 32px;
   }
 }
 
-/* line 69, sass/@config/_headings.scss */
 .heading--5 {
   font-size: 16px;
   line-height: 24px;
   font-weight: 900;
 }
-
 @media (min-width: 1024px) {
-  /* line 69, sass/@config/_headings.scss */
   .heading--5 {
     font-size: 18px;
     line-height: 26px;
   }
 }
-
 @media (min-width: 1440px) {
-  /* line 69, sass/@config/_headings.scss */
   .heading--5 {
     font-size: 20px;
     line-height: 28px;
   }
 }
 
-/* line 82, sass/@config/_headings.scss */
 .heading--6 {
   font-size: 14px;
   line-height: 22px;
   font-weight: 900;
 }
-
 @media (min-width: 1024px) {
-  /* line 82, sass/@config/_headings.scss */
   .heading--6 {
     font-size: 16px;
     line-height: 24px;
   }
 }
-
 @media (min-width: 1440px) {
-  /* line 82, sass/@config/_headings.scss */
   .heading--6 {
     font-size: 18px;
     line-height: 26px;
   }
 }
 
-/* line 95, sass/@config/_headings.scss */
 .label {
   font-size: 10px;
   line-height: 20px;
@@ -600,81 +478,67 @@ body:before {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-
 @media (min-width: 1024px) {
-  /* line 95, sass/@config/_headings.scss */
   .label {
     font-size: 11px;
     line-height: 21px;
   }
 }
-
 @media (min-width: 1440px) {
-  /* line 95, sass/@config/_headings.scss */
   .label {
     font-size: 12px;
     line-height: 22px;
   }
 }
 
-/* line 2, sass/atoms/_logo.scss */
 .logo__svg {
   width: 160px;
   height: 23px;
   overflow: hidden;
 }
-
 @media (min-width: 1024px) {
-  /* line 2, sass/atoms/_logo.scss */
   .logo__svg {
-    width: 200px;
-    height: 29px;
+    width: 185px;
+    height: 27px;
   }
 }
-
 @media (min-width: 1700px) {
-  /* line 2, sass/atoms/_logo.scss */
   .logo__svg {
     width: 210px;
     height: 30px;
   }
 }
+.logo__link {
+  display: block;
+  font-size: 0;
+  line-height: 1;
+}
 
-@media (min-width: 1700px) {
-  /* line 1, sass/molecules/_animated-path-cover.scss */
+@media (min-width: 1024px) {
   .animated-path-cover {
     max-height: 100vh;
     overflow: hidden;
   }
 }
-
-/* line 6, sass/molecules/_animated-path-cover.scss */
 .animated-path-cover__svg {
   height: 650px;
 }
-
 @media (min-width: 1024px) {
-  /* line 6, sass/molecules/_animated-path-cover.scss */
   .animated-path-cover__svg {
     height: auto;
   }
 }
 
-/* line 1, sass/organisms/_header.scss */
 .header {
   padding: 26px 20px;
   border-bottom: solid 1px rgba(252, 255, 107, 0.5);
 }
-
 @media (min-width: 1024px) {
-  /* line 1, sass/organisms/_header.scss */
   .header {
-    padding: 26px 52px;
+    padding: 13px 52px;
   }
 }
-
 @media (min-width: 1700px) {
-  /* line 1, sass/organisms/_header.scss */
   .header {
     padding: 26px 78px;
   }

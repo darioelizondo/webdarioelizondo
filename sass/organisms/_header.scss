@@ -2,9 +2,9 @@
 	padding: $lh 20px;
 	border-bottom: solid 1px rgba(252, 255, 107, 0.5);;
 	@include l {
-		padding: $lh $lh*2;
+		padding: calc( $lh / 2 ) calc( $lh * 2 );
 	}
 	@include xxl {
-		padding: $lh $lh*3;
+		padding: $lh calc( $lh * 3 );
 	}
 }

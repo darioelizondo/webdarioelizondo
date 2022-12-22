@@ -1,0 +1,168 @@
+body {
+	counter-reset: darioelizondo;
+}
+.menu {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: $lh*2 $lh;
+	pointer-events: none;
+	&.active {
+		pointer-events: all;
+	}
+	&.active &__inner {
+		opacity: 1;
+	}
+	@include l {
+		position: static;
+		flex-direction: row;
+		padding: 0;
+		pointer-events: all;
+	}
+	&__background {
+		position: fixed;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		transform: scale(0);
+		top: $lh / 2;
+		right: 20px;
+		background: #1259F8;
+		transition: transform .8s cubic-bezier(.86,0,.07,1);
+		@include l {
+			top: $lh / 3;
+			right: $lh * 3;
+		}
+	}
+	&.active .menu__background {
+		transform: scale(105);
+	}
+	&__inner {
+		width: 100%;
+		min-height: 100vh;
+		opacity: 0;
+		transition: opacity .8s cubic-bezier(.86,0,.07,1);
+		@include l {
+			width: auto;
+			min-height: 0;
+			opacity: 1;
+		}
+	}
+	.logo {
+		position: relative;
+		margin-bottom: $lh*3;
+		z-index: 2;
+		@include l {
+			display: none;
+		}
+	}
+	.logo__svg {
+		width: 267px;
+		height: 39px;
+	}
+	.logo__path {
+		stroke: $secondary;
+	}
+	.logo__path-letters {
+		display: none;
+	}
+	&__wrapper {
+		display: flex;
+		align-items: center;
+	}
+	ul {
+		list-style: none;
+		color: $white;
+		font-size: 0;
+		line-height: 1;
+	}
+	li {
+		margin-bottom: $lh * 1.3;
+		@include l {
+			display: inline-block;
+			margin: 0 $lh*1.3 0 0;
+		}
+		@include xl {
+			margin: 0 $lh*1.5 0 0;	
+		}
+		@include xxl {
+			margin: 0 $lh*2 0 0;	
+		}
+	}
+	&__link {
+		display: block;
+		position: relative;
+		overflow: hidden;
+		font-size: 0;
+		line-height: 1;
+		&:after {
+			content: attr( data-title );
+			display: block;
+			position: absolute;
+			top: 110%;
+			left: 42px;
+			transition: top .5s cubic-bezier(.86,0,.07,1) , color .5s cubic-bezier(.86,0,.07,1);
+			font-size: 28px;
+			line-height: 1;
+			@include l {
+				left: 0;
+				font-size: 14px;
+			}
+			@include xl {
+				font-size: 15px;	
+			}
+			@include xxl {
+				font-size: 16px;
+			}
+		}
+		&:hover:after {
+			top: 0;
+			left: 42px;
+			color: $secondary;
+			@include m {
+				// top: 5px;
+			}
+			@include l {
+				left: 0px;
+				// top: 5px;
+			}
+			@include xl {
+				// top: 5px;
+			}
+		}
+		&:hover .menu__link-title {
+			transform: translateY(-30px);
+		}
+	}
+	&__count {
+		font-size: 14px;
+		line-height: 1;
+		margin-right: $lh;
+		@include l {
+			display: none;
+		}
+	}
+	&__count:before {
+		counter-increment: darioelizondo;
+		content: counter( darioelizondo, decimal-leading-zero );
+	}
+	&__link-title {
+		display: inline-block;
+		transition: transform .5s cubic-bezier(.86,0,.07,1);
+		font-size: 28px;
+		line-height: 1;
+		@include l {
+			font-size: 14px;
+		}
+		@include xl {
+			font-size: 15px;	
+		}
+		@include xxl {
+			font-size: 16px;
+		}
+	}
+}

@@ -9,9 +9,12 @@
 
 // Atoms
 @import 'atoms/logo';
+@import 'atoms/hamburger-menu';
+@import 'atoms/close';
 
 // Molecules
 @import 'molecules/animated-path-cover';
+@import 'molecules/menu';
 
 // Organisms
 @import 'organisms/header';

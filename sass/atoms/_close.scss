@@ -1,0 +1,141 @@
+.close {
+	grid-column: span 1;
+	display: grid;
+	position: fixed;
+	width: 40px;
+	height: 40px;
+	top: 10px;
+	right: 21px;
+	justify-content: flex-end;
+	align-items: center;
+	transform: scale(0);
+	transition: transform .5s cubic-bezier(.215,.61,.355,1);
+	z-index: 102;
+	margin: 1px -2px;
+	@include l {
+		display: none;
+	}
+	&.active &__circles:before,
+	&.active &__circles:after {
+		opacity: 1;
+	}
+	&.active {
+		transform: scale(1);
+	}
+	&__button {
+		display: block;
+		position: fixed;
+		width: 40px;
+		height: 40px;
+		font-size: 4em;
+		text-align: center;
+		vertical-align: middle;
+		margin: 0;
+		padding: 0;
+
+		// Circles
+		&:hover .close__circles:before {
+			box-shadow: inset 0 0 0 0.45em rgba(1, 255, 254, 0.2);
+			transform: scale(1.2);
+		}
+		&:hover .close__circles:after {
+			opacity: 1;
+			transform: scale(1.21);
+		}
+
+		// Crosses
+		&:hover .close__crosses {
+			transform: rotate(360deg);
+		}
+		&:hover .close__cross-2:before {
+			transform: rotate(135deg) scale(1);
+		}
+		&:hover .close__cross-2:after {
+			transform: rotate(-135deg) scale(1);
+		}
+	}	
+	&__circles {
+		display: block;
+		position: relative;
+		width: 100%;
+		height: 100%;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			border-radius: 50%;
+			opacity: 0;
+			transform: scale(1);
+			box-shadow: inset 0 0 0 0.1rem $secondary;
+			transition: box-shadow .5s cubic-bezier(.215,.61,.355,1), transform .5s cubic-bezier(.215,.61,.355,1), opacity .5s linear,;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			background: #ffffff;
+			border-radius: 50%;
+			opacity: 0;
+			transform: scale(0);
+			transform-origin: center center;
+			transition: opacity .5s cubic-bezier(.215,.61,.355,1), transform .5s cubic-bezier(.215,.61,.355,1);
+		}
+	}
+	&__crosses,
+	&__cross-1,
+	&__cross-2 {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		transform-origin: center center;
+		transition: transform .5s cubic-bezier(.215,.61,.355,1);
+	}
+	&__cross-1 {
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+			top: 20px;
+			left: 11px;
+			display: block;
+			width: 17px;
+			height: 2px;
+			background: #ffffff;
+		}
+		&:before {
+			transform: rotate(135deg);
+		}
+		&:after {
+			transform: rotate(-135deg);
+		}
+	}
+	&__cross-2 {
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+			top: 20px;
+			left: 11px;
+			display: block;
+			width: 17px;
+			height: 2px;
+			background: $primary;
+			transition: transform .5s cubic-bezier(.215,.61,.355,1);
+		}
+		&:before {
+			transform: rotate(135deg) scale(0);
+		}
+		&:after {
+			transform: rotate(-135deg) scale(0);
+		}
+	}
+}

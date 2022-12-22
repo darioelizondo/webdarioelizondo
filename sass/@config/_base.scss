@@ -25,7 +25,7 @@ body {
 	line-height: $lh;
 	overflow: hidden;
 	// background: $soft-gray;
-	position: relative;
+	// position: relative;
 }
 
 p,
@@ -175,7 +175,7 @@ body:before
 	right: 0;
 	top: 0;
 	width: 20px;
-	z-index: 9999;
+	z-index: 999999;
 	// @include a { content: 'A'; }
 	// @include b { content: 'B'; }
 	// @include c { content: 'C'; }

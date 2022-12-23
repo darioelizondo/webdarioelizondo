@@ -2,7 +2,10 @@
 	padding: $lh / 2 20px;
 	// padding: calc( $lh / 2 ) 20;
 	border-bottom: solid 1px rgba(252, 255, 107, 0.5);
-	position: relative;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
 	@include l {
 		padding: $lh / 2 $lh * 2;
 		// padding: calc( $lh / 2 ) calc( $lh * 2 );

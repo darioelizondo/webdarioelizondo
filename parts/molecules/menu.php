@@ -6,6 +6,7 @@
  * @package Darío Elizondo
  * 
  */
+wp_enqueue_script( 'anime.js' );
 wp_enqueue_script( 'darioelizondo.menu' );
 
  ?>

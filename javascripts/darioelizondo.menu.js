@@ -1,18 +1,46 @@
+document.addEventListener( 'DOMContentLoaded', onLoadAppearMenu, false );
 document.addEventListener( 'DOMContentLoaded', mainMenu, false );
+
+function appearMenu() {
+
+	let liMenu = document.querySelectorAll( '.menu__list li' );
+	let animeLiMenu = anime.timeline({
+		easing: 'easeInOutSine',
+	});
+
+	liMenu.forEach( (el) => {
+		animeLiMenu.add({
+			targets: el,
+			translateY: [100, 0],
+			duration: 2000
+		}, '-=1800');
+		el.classList.remove( 'hide' );
+	})
+
+}
+
+function onLoadAppearMenu() {
+
+	setTimeout( () => {
+		appearMenu();
+	}, 3000 )
+
+}
 
 function mainMenu() {
 
-	var openButton = document.getElementById( 'openMenu' );
-	var closeButton = document.getElementById( 'closeButton' );
-	var menu = document.getElementById( 'menu' );
+	let openButton = document.getElementById( 'openMenu' );
+	let closeButton = document.getElementById( 'closeButton' );
+	let menu = document.getElementById( 'menu' );
 
-	var navigation = document.getElementById( 'menuWrapper' );
-	var linksMenu = navigation.querySelectorAll( 'li a' );
+	let navigation = document.getElementById( 'menuWrapper' );
+	let linksMenu = navigation.querySelectorAll( 'li a' );
 
 	function openMenu() {
 
 		menu.classList.add( 'active' );
 		closeButton.classList.add( 'active' );
+		appearMenu();
 
 	}
 

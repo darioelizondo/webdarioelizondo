@@ -18,7 +18,7 @@ function animatedLogo() {
 		delay: (el, i) => { return i * 500 }
 	});
 
-	pathLetters.forEach( function(path) {
+	pathLetters.forEach( (path) => {
 		animeLogo.add({
 			targets: path,
 			translateY: [100, 0],
@@ -43,7 +43,7 @@ function animatedLogoOpenMenu() {
 		delay: (el, i) => { return i * 500 }
 	});
 
-	pathLetters.forEach( function(path) {
+	pathLetters.forEach( (path) => {
 		animeLogo.add({
 			targets: path,
 			translateY: [100, 0],

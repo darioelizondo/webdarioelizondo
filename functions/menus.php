@@ -22,7 +22,7 @@ class DarioElizondo_Menu_Walker extends Walker_Nav_Menu {
     function start_el( &$output, $item, $depth=0, $args=[], $id=0 ) {
 
 
-        $output .= "<li class='" .  implode( " ", $item->classes ) . "'>";
+        $output .= "<li class='" .  implode( " ", $item->classes ) . " hide'>";
 
         if ( $args->walker->has_children ) {
 

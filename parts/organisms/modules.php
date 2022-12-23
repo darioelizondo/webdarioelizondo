@@ -11,7 +11,7 @@
 
 <div class="modules">
 	<?php
-		$module_count = 0;
+		$module_count = 1;
 
 		if( have_rows( 'modules' ) ) : while( have_rows( 'modules' ) ) : the_row( 'modules' );
 

@@ -1,0 +1,56 @@
+.social {
+	&__inner {
+		display: block;
+		@include l {
+			display: flex;
+			justify-content: flex-end;
+		}
+	}
+	&__wrapper-icon {
+		display: inline-block;
+		overflow: hidden;
+		transition: transform .3s ease;
+		@include l {
+			display: block;
+			flex: 0 0 50%;
+		}
+		&:hover {
+			transform: translateY(-5px);
+		}
+	}
+	&__wrapper-icon:not(:last-child) {
+		margin-right: 25px;
+		@include l {
+			margin-right: 15px;
+		}
+	}
+	&__link {
+		display: block;
+		&.hide {
+			transform: translateY(100px);
+			transition: transform .5s cubic-bezier(.86,0,.07,1);
+		}
+	}
+	// &__icon {
+	// 	transition: transform .3s ease;
+	// }
+	// &__icon:hover {
+	// 	transform: translateY(-5px);
+	// }
+	&__behance {
+		width: 30px;
+		height: 19px;
+		@include l {
+			width: 27px;
+			height: 17px;
+		}
+	}
+	&__linkedin {
+		width: 21px;
+		height: 21px;
+		@include l {
+			width: 18px;
+			height: 18px;
+		}
+	}
+}

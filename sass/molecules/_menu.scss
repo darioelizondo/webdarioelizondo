@@ -3,6 +3,7 @@ body {
 }
 .menu {
 	display: flex;
+	width: 100%;
 	flex-wrap: wrap;
 	flex-direction: column;
 	justify-content: center;
@@ -13,12 +14,14 @@ body {
 	pointer-events: none;
 	&.active {
 		pointer-events: all;
+		z-index: 99;
 	}
 	&.active &__inner {
 		opacity: 1;
 	}
 	@include l {
 		position: static;
+		// width: auto;
 		flex-direction: row;
 		padding: 0;
 		pointer-events: all;
@@ -168,6 +171,16 @@ body {
 		}
 		@include xxl {
 			font-size: 16px;
+		}
+	}
+	.social {
+		position: relative;
+		z-index: 2;
+		margin-top: 20px;
+		padding-top: 46px;
+		border-top: solid 1px rgba(252, 255, 107, 0.5);
+		@include l {
+			display: none;
 		}
 	}
 }

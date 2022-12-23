@@ -27,5 +27,6 @@ wp_enqueue_script( 'darioelizondo.menu' );
 		 		'walker'          => new DarioElizondo_Menu_Walker,
 		 	) ); ?>
 		</div>
+		<?php include TD . '/parts/atoms/social.php'; ?>
  	</div>
  </div>

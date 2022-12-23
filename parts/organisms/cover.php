@@ -7,6 +7,8 @@
  * 
  */ 
 
+wp_enqueue_script( 'darioelizondo.cover' );
+
 $group = get_sub_field( 'cover' );
 
 ?>
@@ -17,11 +19,11 @@ $group = get_sub_field( 'cover' );
         <div class="cover__inner">
             <div class="cover__wrapper-content">
                 <div class="cover__content">
-                    <h1 class="cover__title">
+                    <h1 id="coverTitle" class="cover__title">
                         <?php echo $group[ 'text' ]; ?>
                     </h1>
-                    <a class="cover__link" href="<?php echo esc_attr( $group[ 'button' ] ); ?>">
-                        <?php echo esc_html( $group[ 'button_text' ] ); ?>
+                    <a id="linkCover" class="cover__link" href="<?php echo esc_attr( $group[ 'button' ] ); ?>">
+                        <span class="cover__link-text"><?php echo esc_html( $group[ 'button_text' ] ); ?></span><img class="cover__link-icon" src="<?php echo TDU . '/images/svgs/arrow-right.svg'; ?>">
                     </a>
                 </div>
             </div>

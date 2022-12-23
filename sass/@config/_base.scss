@@ -117,6 +117,38 @@ button:focus {
 	
 }
 
+.main {
+	overflow: overlay;
+}
+
+::-webkit-scrollbar {
+    width: 8px;     /* Scroll size in vertical */
+    height: 8px;    /* Scroll size in horizontal */
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, .4);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, .4);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgba(0, 0, 0, .4);
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, .4);
+}
+
+::-webkit-scrollbar-track:hover,
+::-webkit-scrollbar-track:active {
+  background: rgba(0, 0, 0, .6);
+}
+
 
 .nowrap {
 	white-space: nowrap;

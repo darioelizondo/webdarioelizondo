@@ -19,11 +19,33 @@ function appearMenu() {
 
 }
 
+function appearSocial() {
+
+	let elSocial = document.querySelectorAll( '.social__link' );
+	let animeElSocial = anime.timeline({
+		easing: 'easeInOutSine',
+	});
+
+	elSocial.forEach( (el) => {
+		animeElSocial.add({
+			targets: el,
+			translateY: [100, 0],
+			duration: 2000
+		}, '-=1800');
+		el.classList.remove( 'hide' );
+	})
+
+}
+
 function onLoadAppearMenu() {
 
 	setTimeout( () => {
 		appearMenu();
-	}, 3000 )
+	}, 3000 );
+
+	setTimeout( () => {
+		appearSocial();
+	}, 3500 );
 
 }
 

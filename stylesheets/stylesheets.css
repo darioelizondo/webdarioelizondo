@@ -250,76 +250,117 @@ button:focus {
   background: #1D63FF;
 }
 
-/* line 121, sass/@config/_base.scss */
+/* line 120, sass/@config/_base.scss */
+.main {
+  overflow: overlay;
+}
+
+/* line 124, sass/@config/_base.scss */
+::-webkit-scrollbar {
+  width: 8px;
+  /* Scroll size in vertical */
+  height: 8px;
+  /* Scroll size in horizontal */
+  background: transparent;
+}
+
+/* line 130, sass/@config/_base.scss */
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+}
+
+/* line 135, sass/@config/_base.scss */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* line 139, sass/@config/_base.scss */
+::-webkit-scrollbar-thumb:active {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* line 143, sass/@config/_base.scss */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* line 147, sass/@config/_base.scss */
+::-webkit-scrollbar-track:hover,
+::-webkit-scrollbar-track:active {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* line 153, sass/@config/_base.scss */
 .nowrap {
   white-space: nowrap;
 }
 
-/* line 125, sass/@config/_base.scss */
+/* line 157, sass/@config/_base.scss */
 .global-inner {
   margin: 0 auto;
   width: calc(100% - 40px);
 }
 
 @media (min-width: 640px) {
-  /* line 125, sass/@config/_base.scss */
+  /* line 157, sass/@config/_base.scss */
   .global-inner {
     width: calc(100% - 104px);
   }
 }
 
 @media (min-width: 1024px) {
-  /* line 125, sass/@config/_base.scss */
+  /* line 157, sass/@config/_base.scss */
   .global-inner {
     width: 960px;
   }
 }
 
 @media (min-width: 1440px) {
-  /* line 125, sass/@config/_base.scss */
+  /* line 157, sass/@config/_base.scss */
   .global-inner {
     width: 1280px;
   }
 }
 
 @media (min-width: 1700px) {
-  /* line 125, sass/@config/_base.scss */
+  /* line 157, sass/@config/_base.scss */
   .global-inner {
     width: 1400px;
   }
 }
 
 @media (min-width: 1024px) {
-  /* line 142, sass/@config/_base.scss */
+  /* line 174, sass/@config/_base.scss */
   .d-mobile {
     display: none;
   }
 }
 
-/* line 148, sass/@config/_base.scss */
+/* line 180, sass/@config/_base.scss */
 .d-desktop {
   display: none;
 }
 
 @media (min-width: 1024px) {
-  /* line 148, sass/@config/_base.scss */
+  /* line 180, sass/@config/_base.scss */
   .d-desktop {
     display: block;
   }
 }
 
-/* line 156, sass/@config/_base.scss */
+/* line 188, sass/@config/_base.scss */
 .image--fluid {
   max-width: 100%;
   height: auto;
 }
 
-/* line 161, sass/@config/_base.scss */
+/* line 193, sass/@config/_base.scss */
 .no--border {
   border: none;
 }
 
-/* line 165, sass/@config/_base.scss */
+/* line 197, sass/@config/_base.scss */
 body:before {
   -webkit-box-align: center;
   align-items: center;
@@ -339,28 +380,28 @@ body:before {
 }
 
 @media (min-width: 640px) {
-  /* line 165, sass/@config/_base.scss */
+  /* line 197, sass/@config/_base.scss */
   body:before {
     content: 'M';
   }
 }
 
 @media (min-width: 1024px) {
-  /* line 165, sass/@config/_base.scss */
+  /* line 197, sass/@config/_base.scss */
   body:before {
     content: 'L';
   }
 }
 
 @media (min-width: 1440px) {
-  /* line 165, sass/@config/_base.scss */
+  /* line 197, sass/@config/_base.scss */
   body:before {
     content: 'XL';
   }
 }
 
 @media (min-width: 1700px) {
-  /* line 165, sass/@config/_base.scss */
+  /* line 197, sass/@config/_base.scss */
   body:before {
     content: 'XXL';
   }
@@ -975,21 +1016,127 @@ body:before {
   transform: rotate(-135deg) scale(0);
 }
 
+/* line 2, sass/atoms/_social.scss */
+.social__inner {
+  display: block;
+}
+
 @media (min-width: 1024px) {
-  /* line 1, sass/molecules/_animated-path-cover.scss */
-  .animated-path-cover {
-    max-height: 100vh;
-    overflow: hidden;
+  /* line 2, sass/atoms/_social.scss */
+  .social__inner {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
   }
 }
 
-/* line 10, sass/molecules/_animated-path-cover.scss */
+/* line 9, sass/atoms/_social.scss */
+.social__wrapper-icon {
+  display: inline-block;
+  overflow: hidden;
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+}
+
+@media (min-width: 1024px) {
+  /* line 9, sass/atoms/_social.scss */
+  .social__wrapper-icon {
+    display: block;
+    -webkit-box-flex: 0;
+    flex: 0 0 50%;
+  }
+}
+
+/* line 17, sass/atoms/_social.scss */
+.social__wrapper-icon:hover {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+
+/* line 21, sass/atoms/_social.scss */
+.social__wrapper-icon:not(:last-child) {
+  margin-right: 25px;
+}
+
+@media (min-width: 1024px) {
+  /* line 21, sass/atoms/_social.scss */
+  .social__wrapper-icon:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+
+/* line 27, sass/atoms/_social.scss */
+.social__link {
+  display: block;
+}
+
+/* line 29, sass/atoms/_social.scss */
+.social__link.hide {
+  -webkit-transform: translateY(100px);
+  transform: translateY(100px);
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: -webkit-transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+/* line 40, sass/atoms/_social.scss */
+.social__behance {
+  width: 30px;
+  height: 19px;
+}
+
+@media (min-width: 1024px) {
+  /* line 40, sass/atoms/_social.scss */
+  .social__behance {
+    width: 27px;
+    height: 17px;
+  }
+}
+
+/* line 48, sass/atoms/_social.scss */
+.social__linkedin {
+  width: 21px;
+  height: 21px;
+}
+
+@media (min-width: 1024px) {
+  /* line 48, sass/atoms/_social.scss */
+  .social__linkedin {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* line 1, sass/molecules/_animated-path-cover.scss */
+.animated-path-cover {
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  /* line 1, sass/molecules/_animated-path-cover.scss */
+  .animated-path-cover {
+    max-height: calc( 100vh - 54px);
+  }
+}
+
+@media (min-width: 1700px) {
+  /* line 1, sass/molecules/_animated-path-cover.scss */
+  .animated-path-cover {
+    max-height: calc( 100vh - 83px);
+  }
+}
+
+/* line 9, sass/molecules/_animated-path-cover.scss */
 .animated-path-cover__svg {
   height: 650px;
 }
 
 @media (min-width: 1024px) {
-  /* line 10, sass/molecules/_animated-path-cover.scss */
+  /* line 9, sass/molecules/_animated-path-cover.scss */
   .animated-path-cover__svg {
     height: auto;
   }
@@ -1004,6 +1151,7 @@ body {
 .menu {
   display: -webkit-box;
   display: flex;
+  width: 100%;
   flex-wrap: wrap;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -1017,12 +1165,13 @@ body {
   pointer-events: none;
 }
 
-/* line 14, sass/molecules/_menu.scss */
+/* line 15, sass/molecules/_menu.scss */
 .menu.active {
   pointer-events: all;
+  z-index: 99;
 }
 
-/* line 17, sass/molecules/_menu.scss */
+/* line 19, sass/molecules/_menu.scss */
 .menu.active .menu__inner {
   opacity: 1;
 }
@@ -1039,7 +1188,7 @@ body {
   }
 }
 
-/* line 26, sass/molecules/_menu.scss */
+/* line 29, sass/molecules/_menu.scss */
 .menu__background {
   position: fixed;
   width: 40px;
@@ -1057,20 +1206,20 @@ body {
 }
 
 @media (min-width: 1024px) {
-  /* line 26, sass/molecules/_menu.scss */
+  /* line 29, sass/molecules/_menu.scss */
   .menu__background {
     top: 8.66667px;
     right: 78px;
   }
 }
 
-/* line 41, sass/molecules/_menu.scss */
+/* line 44, sass/molecules/_menu.scss */
 .menu.active .menu__background {
   -webkit-transform: scale(105);
   transform: scale(105);
 }
 
-/* line 44, sass/molecules/_menu.scss */
+/* line 47, sass/molecules/_menu.scss */
 .menu__inner {
   width: 100%;
   min-height: 100vh;
@@ -1080,7 +1229,7 @@ body {
 }
 
 @media (min-width: 1024px) {
-  /* line 44, sass/molecules/_menu.scss */
+  /* line 47, sass/molecules/_menu.scss */
   .menu__inner {
     width: auto;
     min-height: 0;
@@ -1088,7 +1237,7 @@ body {
   }
 }
 
-/* line 55, sass/molecules/_menu.scss */
+/* line 58, sass/molecules/_menu.scss */
 .menu .logo {
   position: relative;
   margin-bottom: 78px;
@@ -1096,29 +1245,29 @@ body {
 }
 
 @media (min-width: 1024px) {
-  /* line 55, sass/molecules/_menu.scss */
+  /* line 58, sass/molecules/_menu.scss */
   .menu .logo {
     display: none;
   }
 }
 
-/* line 63, sass/molecules/_menu.scss */
+/* line 66, sass/molecules/_menu.scss */
 .menu .logo__svg {
   width: 267px;
   height: 39px;
 }
 
-/* line 67, sass/molecules/_menu.scss */
+/* line 70, sass/molecules/_menu.scss */
 .menu .logo__path {
   stroke: #FCFF6B;
 }
 
-/* line 70, sass/molecules/_menu.scss */
+/* line 73, sass/molecules/_menu.scss */
 .menu .logo__path-letters {
   display: none;
 }
 
-/* line 73, sass/molecules/_menu.scss */
+/* line 76, sass/molecules/_menu.scss */
 .menu__wrapper {
   display: -webkit-box;
   display: flex;
@@ -1126,7 +1275,7 @@ body {
   align-items: center;
 }
 
-/* line 77, sass/molecules/_menu.scss */
+/* line 80, sass/molecules/_menu.scss */
 .menu ul {
   list-style: none;
   color: #ffffff;
@@ -1135,13 +1284,13 @@ body {
   overflow: hidden;
 }
 
-/* line 84, sass/molecules/_menu.scss */
+/* line 87, sass/molecules/_menu.scss */
 .menu li {
   margin-bottom: 33.8px;
 }
 
 @media (min-width: 1024px) {
-  /* line 84, sass/molecules/_menu.scss */
+  /* line 87, sass/molecules/_menu.scss */
   .menu li {
     display: inline-block;
     margin: 0 33.8px 0 0;
@@ -1149,20 +1298,20 @@ body {
 }
 
 @media (min-width: 1440px) {
-  /* line 84, sass/molecules/_menu.scss */
+  /* line 87, sass/molecules/_menu.scss */
   .menu li {
     margin: 0 39px 0 0;
   }
 }
 
 @media (min-width: 1700px) {
-  /* line 84, sass/molecules/_menu.scss */
+  /* line 87, sass/molecules/_menu.scss */
   .menu li {
     margin: 0 52px 0 0;
   }
 }
 
-/* line 96, sass/molecules/_menu.scss */
+/* line 99, sass/molecules/_menu.scss */
 .menu li.hide {
   -webkit-transform: translateY(100px);
   transform: translateY(100px);
@@ -1172,7 +1321,7 @@ body {
   transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
-/* line 101, sass/molecules/_menu.scss */
+/* line 104, sass/molecules/_menu.scss */
 .menu__link {
   display: block;
   position: relative;
@@ -1181,7 +1330,7 @@ body {
   line-height: 1;
 }
 
-/* line 107, sass/molecules/_menu.scss */
+/* line 110, sass/molecules/_menu.scss */
 .menu__link:after {
   content: attr(data-title);
   display: block;
@@ -1195,7 +1344,7 @@ body {
 }
 
 @media (min-width: 1024px) {
-  /* line 107, sass/molecules/_menu.scss */
+  /* line 110, sass/molecules/_menu.scss */
   .menu__link:after {
     left: 0;
     font-size: 14px;
@@ -1203,20 +1352,20 @@ body {
 }
 
 @media (min-width: 1440px) {
-  /* line 107, sass/molecules/_menu.scss */
+  /* line 110, sass/molecules/_menu.scss */
   .menu__link:after {
     font-size: 15px;
   }
 }
 
 @media (min-width: 1700px) {
-  /* line 107, sass/molecules/_menu.scss */
+  /* line 110, sass/molecules/_menu.scss */
   .menu__link:after {
     font-size: 16px;
   }
 }
 
-/* line 127, sass/molecules/_menu.scss */
+/* line 130, sass/molecules/_menu.scss */
 .menu__link:hover:after {
   top: 0;
   left: 42px;
@@ -1224,19 +1373,19 @@ body {
 }
 
 @media (min-width: 1024px) {
-  /* line 127, sass/molecules/_menu.scss */
+  /* line 130, sass/molecules/_menu.scss */
   .menu__link:hover:after {
     left: 0px;
   }
 }
 
-/* line 142, sass/molecules/_menu.scss */
+/* line 145, sass/molecules/_menu.scss */
 .menu__link:hover .menu__link-title {
   -webkit-transform: translateY(-30px);
   transform: translateY(-30px);
 }
 
-/* line 146, sass/molecules/_menu.scss */
+/* line 149, sass/molecules/_menu.scss */
 .menu__count {
   font-size: 14px;
   line-height: 1;
@@ -1244,19 +1393,19 @@ body {
 }
 
 @media (min-width: 1024px) {
-  /* line 146, sass/molecules/_menu.scss */
+  /* line 149, sass/molecules/_menu.scss */
   .menu__count {
     display: none;
   }
 }
 
-/* line 154, sass/molecules/_menu.scss */
+/* line 157, sass/molecules/_menu.scss */
 .menu__count:before {
   counter-increment: darioelizondo;
   content: counter(darioelizondo, decimal-leading-zero);
 }
 
-/* line 158, sass/molecules/_menu.scss */
+/* line 161, sass/molecules/_menu.scss */
 .menu__link-title {
   display: inline-block;
   -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
@@ -1268,23 +1417,39 @@ body {
 }
 
 @media (min-width: 1024px) {
-  /* line 158, sass/molecules/_menu.scss */
+  /* line 161, sass/molecules/_menu.scss */
   .menu__link-title {
     font-size: 14px;
   }
 }
 
 @media (min-width: 1440px) {
-  /* line 158, sass/molecules/_menu.scss */
+  /* line 161, sass/molecules/_menu.scss */
   .menu__link-title {
     font-size: 15px;
   }
 }
 
 @media (min-width: 1700px) {
-  /* line 158, sass/molecules/_menu.scss */
+  /* line 161, sass/molecules/_menu.scss */
   .menu__link-title {
     font-size: 16px;
+  }
+}
+
+/* line 176, sass/molecules/_menu.scss */
+.menu .social {
+  position: relative;
+  z-index: 2;
+  margin-top: 20px;
+  padding-top: 46px;
+  border-top: solid 1px rgba(252, 255, 107, 0.5);
+}
+
+@media (min-width: 1024px) {
+  /* line 176, sass/molecules/_menu.scss */
+  .menu .social {
+    display: none;
   }
 }
 
@@ -1296,6 +1461,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 98;
 }
 
 @media (min-width: 1024px) {
@@ -1312,7 +1478,7 @@ body {
   }
 }
 
-/* line 17, sass/organisms/_header.scss */
+/* line 18, sass/organisms/_header.scss */
 .header__inner {
   display: -webkit-box;
   display: flex;
@@ -1323,22 +1489,230 @@ body {
 }
 
 @media (min-width: 1024px) {
-  /* line 22, sass/organisms/_header.scss */
+  /* line 23, sass/organisms/_header.scss */
   .header__wrapper-hamburger-menu {
     display: none;
   }
 }
 
-/* line 27, sass/organisms/_header.scss */
+/* line 28, sass/organisms/_header.scss */
 .header__wrapper-logo, .header__wrapper-hamburger-menu {
   -webkit-box-flex: 0;
   flex: 0 0 50%;
 }
 
 @media (min-width: 1024px) {
-  /* line 27, sass/organisms/_header.scss */
+  /* line 28, sass/organisms/_header.scss */
   .header__wrapper-logo, .header__wrapper-hamburger-menu {
     -webkit-box-flex: 0;
     flex: 0 0 auto;
+  }
+}
+
+/* line 35, sass/organisms/_header.scss */
+.header__wrapper-social {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  /* line 35, sass/organisms/_header.scss */
+  .header__wrapper-social {
+    display: block;
+  }
+}
+
+/* line 45, sass/organisms/_header.scss */
+body.admin-bar .header {
+  top: 46px;
+}
+
+@media (min-width: 782px) {
+  /* line 45, sass/organisms/_header.scss */
+  body.admin-bar .header {
+    top: 32px;
+  }
+}
+
+/* line 52, sass/organisms/_header.scss */
+#wpadminbar {
+  position: fixed;
+}
+
+/* line 1, sass/organisms/_cover.scss */
+.cover {
+  margin-top: 64px;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  /* line 1, sass/organisms/_cover.scss */
+  .cover {
+    margin-top: 54px;
+  }
+}
+
+@media (min-width: 1700px) {
+  /* line 1, sass/organisms/_cover.scss */
+  .cover {
+    margin-top: 83px;
+  }
+}
+
+/* line 10, sass/organisms/_cover.scss */
+.cover__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+}
+
+@media (min-width: 1024px) {
+  /* line 10, sass/organisms/_cover.scss */
+  .cover__inner {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0 52px;
+  }
+}
+
+@media (min-width: 1700px) {
+  /* line 10, sass/organisms/_cover.scss */
+  .cover__inner {
+    padding: 0 78px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 26, sass/organisms/_cover.scss */
+  .cover__wrapper-content, .cover__wrapper-proyects {
+    -webkit-box-flex: 0;
+    flex: 0 0 50%;
+  }
+}
+
+/* line 32, sass/organisms/_cover.scss */
+.cover__wrapper-content {
+  padding-top: 52px;
+}
+
+@media (min-width: 1024px) {
+  /* line 32, sass/organisms/_cover.scss */
+  .cover__wrapper-content {
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 1700px) {
+  /* line 32, sass/organisms/_cover.scss */
+  .cover__wrapper-content {
+    -webkit-box-flex: 0;
+    flex: 0 0 40%;
+  }
+}
+
+/* line 41, sass/organisms/_cover.scss */
+.cover__title {
+  padding-bottom: 26px;
+}
+
+/* line 44, sass/organisms/_cover.scss */
+.cover__title p {
+  color: #ffffff;
+  font-size: 52px;
+  line-height: 52px;
+  font-weight: 500;
+  overflow: hidden;
+  -webkit-transition: opacity .3s ease;
+  transition: opacity .3s ease;
+}
+
+@media (min-width: 1024px) {
+  /* line 44, sass/organisms/_cover.scss */
+  .cover__title p {
+    font-size: 95px;
+    line-height: 95px;
+  }
+}
+
+@media (min-width: 1440px) {
+  /* line 44, sass/organisms/_cover.scss */
+  .cover__title p {
+    font-size: 100px;
+    line-height: 105px;
+  }
+}
+
+@media (min-width: 1700px) {
+  /* line 44, sass/organisms/_cover.scss */
+  .cover__title p {
+    font-size: 110px;
+    line-height: 105px;
+  }
+}
+
+/* line 67, sass/organisms/_cover.scss */
+.cover__line {
+  display: inline-block;
+  -webkit-transform: translateY(-500px);
+  transform: translateY(-500px);
+}
+
+/* line 71, sass/organisms/_cover.scss */
+.cover__line-featured {
+  color: #FCFF6B;
+}
+
+/* line 74, sass/organisms/_cover.scss */
+.cover__link {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 26px;
+  opacity: 0;
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+}
+
+/* line 82, sass/organisms/_cover.scss */
+.cover__link:hover {
+  -webkit-transform: translateX(15px);
+  transform: translateX(15px);
+}
+
+@media (min-width: 1024px) {
+  /* line 74, sass/organisms/_cover.scss */
+  .cover__link {
+    font-size: 26px;
+    line-height: 1;
+  }
+}
+
+/* line 90, sass/organisms/_cover.scss */
+.cover__link-text {
+  display: inline-block;
+  margin-right: 26px;
+}
+
+/* line 94, sass/organisms/_cover.scss */
+.cover__link-icon {
+  width: 40px;
+  height: 14px;
+  display: inline-block;
+}
+
+@media (min-width: 1024px) {
+  /* line 94, sass/organisms/_cover.scss */
+  .cover__link-icon {
+    width: 49px;
+    height: 18px;
   }
 }

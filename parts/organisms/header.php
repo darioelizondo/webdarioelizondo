@@ -21,7 +21,7 @@
  			<?php include TD . '/parts/molecules/menu.php'; ?>
  		</div>
  		<div class="header__wrapper-social">
- 			
+ 			<?php include TD . '/parts/atoms/social.php'; ?>
  		</div>
  	</div>
  </div>

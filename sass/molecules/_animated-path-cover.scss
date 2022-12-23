@@ -1,12 +1,11 @@
 .animated-path-cover {
+	overflow: hidden;
 	@include l {
-		max-height: 100vh;
-		overflow: hidden;
+		max-height: calc( 100vh - 54px );
 	}
-	// @include xxl {
-	// 	max-height: 100vh;
-	// 	overflow: hidden;
-	// }
+	@include xxl {
+		max-height: calc( 100vh - 83px );
+	}
 	&__svg {
 		height: 650px;
 		@include l {

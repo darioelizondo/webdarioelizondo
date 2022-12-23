@@ -6,6 +6,7 @@
 	top: 0;
 	left: 0;
 	width: 100%;
+	z-index: 98;
 	@include l {
 		padding: $lh / 2 $lh * 2;
 		// padding: calc( $lh / 2 ) calc( $lh * 2 );
@@ -31,4 +32,23 @@
 			flex: 0 0 auto;
 		}
 	}
+	&__wrapper-social {
+		display: none;
+		@include l {
+			display: block;
+		}
+	}
+}
+
+// Fix view with Admin bar
+body.admin-bar {
+	.header  {
+		top: 46px;
+		@media (min-width: 782px) {
+			top: 32px;
+		}
+	}
+}
+#wpadminbar {
+	position: fixed;
 }

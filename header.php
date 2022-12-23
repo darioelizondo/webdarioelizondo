@@ -19,5 +19,5 @@
 <?php wp_head(); ?>
 
 <body <?php body_class(); ?>>
-
-    <?php include TD . '/parts/organisms/header.php'; ?>
+    <main class="main">
+        <?php include TD . '/parts/organisms/header.php'; ?>

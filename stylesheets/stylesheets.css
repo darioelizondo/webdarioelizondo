@@ -1240,6 +1240,7 @@ body {
 /* line 58, sass/molecules/_menu.scss */
 .menu .logo {
   position: relative;
+  margin-top: 26px;
   margin-bottom: 78px;
   z-index: 2;
 }
@@ -1248,26 +1249,27 @@ body {
   /* line 58, sass/molecules/_menu.scss */
   .menu .logo {
     display: none;
+    margin-top: 0;
   }
 }
 
-/* line 66, sass/molecules/_menu.scss */
+/* line 68, sass/molecules/_menu.scss */
 .menu .logo__svg {
   width: 267px;
   height: 39px;
 }
 
-/* line 70, sass/molecules/_menu.scss */
+/* line 72, sass/molecules/_menu.scss */
 .menu .logo__path {
   stroke: #FCFF6B;
 }
 
-/* line 73, sass/molecules/_menu.scss */
+/* line 75, sass/molecules/_menu.scss */
 .menu .logo__path-letters {
   display: none;
 }
 
-/* line 76, sass/molecules/_menu.scss */
+/* line 78, sass/molecules/_menu.scss */
 .menu__wrapper {
   display: -webkit-box;
   display: flex;
@@ -1275,7 +1277,7 @@ body {
   align-items: center;
 }
 
-/* line 80, sass/molecules/_menu.scss */
+/* line 82, sass/molecules/_menu.scss */
 .menu ul {
   list-style: none;
   color: #ffffff;
@@ -1284,13 +1286,13 @@ body {
   overflow: hidden;
 }
 
-/* line 87, sass/molecules/_menu.scss */
+/* line 89, sass/molecules/_menu.scss */
 .menu li {
   margin-bottom: 33.8px;
 }
 
 @media (min-width: 1024px) {
-  /* line 87, sass/molecules/_menu.scss */
+  /* line 89, sass/molecules/_menu.scss */
   .menu li {
     display: inline-block;
     margin: 0 33.8px 0 0;
@@ -1298,20 +1300,20 @@ body {
 }
 
 @media (min-width: 1440px) {
-  /* line 87, sass/molecules/_menu.scss */
+  /* line 89, sass/molecules/_menu.scss */
   .menu li {
     margin: 0 39px 0 0;
   }
 }
 
 @media (min-width: 1700px) {
-  /* line 87, sass/molecules/_menu.scss */
+  /* line 89, sass/molecules/_menu.scss */
   .menu li {
     margin: 0 52px 0 0;
   }
 }
 
-/* line 99, sass/molecules/_menu.scss */
+/* line 101, sass/molecules/_menu.scss */
 .menu li.hide {
   -webkit-transform: translateY(100px);
   transform: translateY(100px);
@@ -1321,7 +1323,7 @@ body {
   transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
-/* line 104, sass/molecules/_menu.scss */
+/* line 106, sass/molecules/_menu.scss */
 .menu__link {
   display: block;
   position: relative;
@@ -1330,7 +1332,7 @@ body {
   line-height: 1;
 }
 
-/* line 110, sass/molecules/_menu.scss */
+/* line 112, sass/molecules/_menu.scss */
 .menu__link:after {
   content: attr(data-title);
   display: block;
@@ -1344,7 +1346,7 @@ body {
 }
 
 @media (min-width: 1024px) {
-  /* line 110, sass/molecules/_menu.scss */
+  /* line 112, sass/molecules/_menu.scss */
   .menu__link:after {
     left: 0;
     font-size: 14px;
@@ -1352,20 +1354,20 @@ body {
 }
 
 @media (min-width: 1440px) {
-  /* line 110, sass/molecules/_menu.scss */
+  /* line 112, sass/molecules/_menu.scss */
   .menu__link:after {
     font-size: 15px;
   }
 }
 
 @media (min-width: 1700px) {
-  /* line 110, sass/molecules/_menu.scss */
+  /* line 112, sass/molecules/_menu.scss */
   .menu__link:after {
     font-size: 16px;
   }
 }
 
-/* line 130, sass/molecules/_menu.scss */
+/* line 132, sass/molecules/_menu.scss */
 .menu__link:hover:after {
   top: 0;
   left: 42px;
@@ -1373,19 +1375,19 @@ body {
 }
 
 @media (min-width: 1024px) {
-  /* line 130, sass/molecules/_menu.scss */
+  /* line 132, sass/molecules/_menu.scss */
   .menu__link:hover:after {
     left: 0px;
   }
 }
 
-/* line 145, sass/molecules/_menu.scss */
+/* line 147, sass/molecules/_menu.scss */
 .menu__link:hover .menu__link-title {
   -webkit-transform: translateY(-30px);
   transform: translateY(-30px);
 }
 
-/* line 149, sass/molecules/_menu.scss */
+/* line 151, sass/molecules/_menu.scss */
 .menu__count {
   font-size: 14px;
   line-height: 1;
@@ -1393,19 +1395,19 @@ body {
 }
 
 @media (min-width: 1024px) {
-  /* line 149, sass/molecules/_menu.scss */
+  /* line 151, sass/molecules/_menu.scss */
   .menu__count {
     display: none;
   }
 }
 
-/* line 157, sass/molecules/_menu.scss */
+/* line 159, sass/molecules/_menu.scss */
 .menu__count:before {
   counter-increment: darioelizondo;
   content: counter(darioelizondo, decimal-leading-zero);
 }
 
-/* line 161, sass/molecules/_menu.scss */
+/* line 163, sass/molecules/_menu.scss */
 .menu__link-title {
   display: inline-block;
   -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
@@ -1417,27 +1419,27 @@ body {
 }
 
 @media (min-width: 1024px) {
-  /* line 161, sass/molecules/_menu.scss */
+  /* line 163, sass/molecules/_menu.scss */
   .menu__link-title {
     font-size: 14px;
   }
 }
 
 @media (min-width: 1440px) {
-  /* line 161, sass/molecules/_menu.scss */
+  /* line 163, sass/molecules/_menu.scss */
   .menu__link-title {
     font-size: 15px;
   }
 }
 
 @media (min-width: 1700px) {
-  /* line 161, sass/molecules/_menu.scss */
+  /* line 163, sass/molecules/_menu.scss */
   .menu__link-title {
     font-size: 16px;
   }
 }
 
-/* line 176, sass/molecules/_menu.scss */
+/* line 178, sass/molecules/_menu.scss */
 .menu .social {
   position: relative;
   z-index: 2;
@@ -1447,7 +1449,7 @@ body {
 }
 
 @media (min-width: 1024px) {
-  /* line 176, sass/molecules/_menu.scss */
+  /* line 178, sass/molecules/_menu.scss */
   .menu .social {
     display: none;
   }

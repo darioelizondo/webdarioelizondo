@@ -28,24 +28,37 @@ $group = get_sub_field( 'cover' );
                 </div>
             </div>
             <div class="cover__wrapper-proyects">
-                <?php 
-                    $args = array(
-                        'post_type'     => 'proyects',
-                        'post_per_page' => 3,
-                        'order'         => 'DESC',
-                        'orderby'       => 'date',
-                        'post__in'      => $group[ 'proyects' ]
-                    );
-                    $proyects = new WP_Query( $args );
+                <div class="cover__wrapper-caption">
+                    <p class="cover__caption">
+                        Check some proyects
+                    </p>
+                </div>
+                <div class="cover__inner-proyects">
+                    <?php 
+                        $args = array(
+                            'post_type'      => 'proyects',
+                            'posts_per_page' => 3,
+                            'order'          => 'DESC',
+                            'orderby'        => 'date',
+                            'post__in'       => $group[ 'proyects' ]
+                        );
+                        $proyects = new WP_Query( $args );
+                        $count = 1;
+                        $count_proyects =  $proyects->post_count;
 
-                    if ( $proyects->have_posts() ) : while( $proyects->have_posts() ) : $proyects->the_post();
+                        if ( $proyects->have_posts() ) : while( $proyects->have_posts() ) : $proyects->the_post();
 
-                        include TD . '/parts/molecules/proyect-item-cover.php';
+                            include TD . '/parts/molecules/proyect-item.php';
 
-                    endwhile;
-                    wp_reset_postdata();
-                    endif;
-                 ?>
+                            $count++;
+                            $count_proyects--;
+
+                        endwhile;
+                        wp_reset_postdata();
+                        unset( $count );
+                        endif;
+                     ?>
+                </div>
             </div>
         </div>
     <?php endif ?>

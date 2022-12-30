@@ -35,3 +35,27 @@
 .bg--soft-gray {
 	background-color: $soft-gray;
 }
+.bg--primary-dark {
+	background-color: #1259F8;
+}
+
+// Border color
+
+.border--primary {
+	border: solid 4px $primary;
+}
+.border--secondary {
+	border: solid 4px $secondary;
+}
+.border--tertiary {
+	border: solid 4px $tertiary;
+}
+.border--text {
+	border: solid 4px $text;
+}
+.border--soft-gray {
+	border: solid 4px $soft-gray;
+}
+.border--primary-dark {
+	border: solid 4px #1259F8;
+}

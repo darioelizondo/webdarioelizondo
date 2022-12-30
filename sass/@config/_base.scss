@@ -112,14 +112,14 @@ button:focus {
 }
 
 ::selection {
-	color: $white;
-	background: $primary;
+	color: $primary;
+	background: $secondary;
 	
 }
 
-.main {
-	overflow: overlay;
-}
+// .main {
+// 	overflow: overlay;
+// }
 
 ::-webkit-scrollbar {
     width: 8px;     /* Scroll size in vertical */

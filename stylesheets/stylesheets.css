@@ -242,17 +242,12 @@ button:focus {
 
 /* line 114, sass/@config/_base.scss */
 ::-moz-selection {
-  color: #ffffff;
-  background: #1D63FF;
+  color: #1D63FF;
+  background: #FCFF6B;
 }
 ::selection {
-  color: #ffffff;
-  background: #1D63FF;
-}
-
-/* line 120, sass/@config/_base.scss */
-.main {
-  overflow: overlay;
+  color: #1D63FF;
+  background: #FCFF6B;
 }
 
 /* line 124, sass/@config/_base.scss */
@@ -460,6 +455,41 @@ body:before {
 /* line 35, sass/@config/_color.scss */
 .bg--soft-gray {
   background-color: #F5F8FF;
+}
+
+/* line 38, sass/@config/_color.scss */
+.bg--primary-dark {
+  background-color: #1259F8;
+}
+
+/* line 44, sass/@config/_color.scss */
+.border--primary {
+  border: solid 4px #1D63FF;
+}
+
+/* line 47, sass/@config/_color.scss */
+.border--secondary {
+  border: solid 4px #FCFF6B;
+}
+
+/* line 50, sass/@config/_color.scss */
+.border--tertiary {
+  border: solid 4px #01FFFE;
+}
+
+/* line 53, sass/@config/_color.scss */
+.border--text {
+  border: solid 4px #36385E;
+}
+
+/* line 56, sass/@config/_color.scss */
+.border--soft-gray {
+  border: solid 4px #F5F8FF;
+}
+
+/* line 59, sass/@config/_color.scss */
+.border--primary-dark {
+  border: solid 4px #1259F8;
 }
 
 /* line 1, sass/@config/_headings.scss */
@@ -1455,6 +1485,106 @@ body {
   }
 }
 
+/* line 1, sass/molecules/_proyect-item.scss */
+.proyect-item {
+  width: 100%;
+}
+
+/* line 3, sass/molecules/_proyect-item.scss */
+.proyect-item__wrapper-image {
+  overflow: hidden;
+}
+
+/* line 6, sass/molecules/_proyect-item.scss */
+.proyect-item__image {
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+}
+
+/* line 9, sass/molecules/_proyect-item.scss */
+.proyect-item__content {
+  padding: 13px;
+}
+
+/* line 12, sass/molecules/_proyect-item.scss */
+.proyect-item__title {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+@media (min-width: 1024px) {
+  /* line 12, sass/molecules/_proyect-item.scss */
+  .proyect-item__title {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+@media (min-width: 1440px) {
+  /* line 12, sass/molecules/_proyect-item.scss */
+  .proyect-item__title {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+
+@media (min-width: 1700px) {
+  /* line 12, sass/molecules/_proyect-item.scss */
+  .proyect-item__title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+/* line 30, sass/molecules/_proyect-item.scss */
+.proyect-item__tags {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+/* line 34, sass/molecules/_proyect-item.scss */
+.proyect-item__tag {
+  color: #ffffff;
+  font-size: 10px;
+  line-height: 16px;
+}
+
+@media (min-width: 1024px) {
+  /* line 34, sass/molecules/_proyect-item.scss */
+  .proyect-item__tag {
+    font-size: 13px;
+    line-height: 19px;
+  }
+}
+
+@media (min-width: 1440px) {
+  /* line 34, sass/molecules/_proyect-item.scss */
+  .proyect-item__tag {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: 1700px) {
+  /* line 34, sass/molecules/_proyect-item.scss */
+  .proyect-item__tag {
+    font-size: 15px;
+    line-height: 21px;
+  }
+}
+
+/* line 52, sass/molecules/_proyect-item.scss */
+.proyect-item.bg--secondary .proyect-item__title,
+.proyect-item.bg--secondary .proyect-item__tag {
+  color: #36385E;
+}
+
 /* line 1, sass/organisms/_header.scss */
 .header {
   padding: 13px 20px;
@@ -1588,40 +1718,84 @@ body.admin-bar .header {
   }
 }
 
+/* line 26, sass/organisms/_cover.scss */
+.cover__wrapper-proyects {
+  position: relative;
+}
+
 @media (min-width: 1024px) {
   /* line 26, sass/organisms/_cover.scss */
-  .cover__wrapper-content, .cover__wrapper-proyects {
+  .cover__wrapper-proyects {
+    min-height: 600px;
     -webkit-box-flex: 0;
     flex: 0 0 50%;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
   }
 }
 
-/* line 32, sass/organisms/_cover.scss */
+@media (min-width: 1700px) {
+  /* line 26, sass/organisms/_cover.scss */
+  .cover__wrapper-proyects {
+    min-height: 700px;
+    -webkit-box-flex: 0;
+    flex: 0 0 60%;
+  }
+}
+
+/* line 42, sass/organisms/_cover.scss */
+.cover__inner-proyects {
+  min-height: 500px;
+  position: relative;
+}
+
+/* line 46, sass/organisms/_cover.scss */
 .cover__wrapper-content {
   padding-top: 52px;
 }
 
 @media (min-width: 1024px) {
-  /* line 32, sass/organisms/_cover.scss */
+  /* line 46, sass/organisms/_cover.scss */
   .cover__wrapper-content {
+    -webkit-box-flex: 0;
+    flex: 0 0 50%;
     padding-top: 0;
   }
 }
 
 @media (min-width: 1700px) {
-  /* line 32, sass/organisms/_cover.scss */
+  /* line 46, sass/organisms/_cover.scss */
   .cover__wrapper-content {
     -webkit-box-flex: 0;
     flex: 0 0 40%;
   }
 }
 
-/* line 41, sass/organisms/_cover.scss */
+@media (min-width: 640px) {
+  /* line 56, sass/organisms/_cover.scss */
+  .cover__content {
+    text-align: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 56, sass/organisms/_cover.scss */
+  .cover__content {
+    text-align: left;
+  }
+}
+
+/* line 64, sass/organisms/_cover.scss */
 .cover__title {
   padding-bottom: 26px;
 }
 
-/* line 44, sass/organisms/_cover.scss */
+/* line 67, sass/organisms/_cover.scss */
 .cover__title p {
   color: #ffffff;
   font-size: 52px;
@@ -1633,7 +1807,7 @@ body.admin-bar .header {
 }
 
 @media (min-width: 1024px) {
-  /* line 44, sass/organisms/_cover.scss */
+  /* line 67, sass/organisms/_cover.scss */
   .cover__title p {
     font-size: 95px;
     line-height: 95px;
@@ -1641,7 +1815,7 @@ body.admin-bar .header {
 }
 
 @media (min-width: 1440px) {
-  /* line 44, sass/organisms/_cover.scss */
+  /* line 67, sass/organisms/_cover.scss */
   .cover__title p {
     font-size: 100px;
     line-height: 105px;
@@ -1649,26 +1823,26 @@ body.admin-bar .header {
 }
 
 @media (min-width: 1700px) {
-  /* line 44, sass/organisms/_cover.scss */
+  /* line 67, sass/organisms/_cover.scss */
   .cover__title p {
     font-size: 110px;
     line-height: 105px;
   }
 }
 
-/* line 67, sass/organisms/_cover.scss */
+/* line 90, sass/organisms/_cover.scss */
 .cover__line {
   display: inline-block;
   -webkit-transform: translateY(-500px);
   transform: translateY(-500px);
 }
 
-/* line 71, sass/organisms/_cover.scss */
+/* line 94, sass/organisms/_cover.scss */
 .cover__line-featured {
   color: #FCFF6B;
 }
 
-/* line 74, sass/organisms/_cover.scss */
+/* line 97, sass/organisms/_cover.scss */
 .cover__link {
   display: -webkit-box;
   display: flex;
@@ -1684,27 +1858,35 @@ body.admin-bar .header {
   transition: transform .3s ease, -webkit-transform .3s ease;
 }
 
-/* line 82, sass/organisms/_cover.scss */
+/* line 105, sass/organisms/_cover.scss */
 .cover__link:hover {
   -webkit-transform: translateX(15px);
   transform: translateX(15px);
 }
 
-@media (min-width: 1024px) {
-  /* line 74, sass/organisms/_cover.scss */
+@media (min-width: 640px) {
+  /* line 97, sass/organisms/_cover.scss */
   .cover__link {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 97, sass/organisms/_cover.scss */
+  .cover__link {
+    display: inline-block;
     font-size: 26px;
     line-height: 1;
   }
 }
 
-/* line 90, sass/organisms/_cover.scss */
+/* line 117, sass/organisms/_cover.scss */
 .cover__link-text {
   display: inline-block;
   margin-right: 26px;
 }
 
-/* line 94, sass/organisms/_cover.scss */
+/* line 121, sass/organisms/_cover.scss */
 .cover__link-icon {
   width: 40px;
   height: 14px;
@@ -1712,9 +1894,176 @@ body.admin-bar .header {
 }
 
 @media (min-width: 1024px) {
-  /* line 94, sass/organisms/_cover.scss */
+  /* line 121, sass/organisms/_cover.scss */
   .cover__link-icon {
     width: 49px;
     height: 18px;
+  }
+}
+
+/* line 130, sass/organisms/_cover.scss */
+.cover__wrapper-caption {
+  text-align: center;
+}
+
+/* line 133, sass/organisms/_cover.scss */
+.cover__caption {
+  color: #ffffff;
+  margin-top: 52px;
+  font-size: 14px;
+  line-height: 1;
+}
+
+@media (min-width: 1024px) {
+  /* line 133, sass/organisms/_cover.scss */
+  .cover__caption {
+    font-size: 15px;
+    line-height: 1;
+    margin-top: -39px;
+  }
+}
+
+@media (min-width: 1440px) {
+  /* line 133, sass/organisms/_cover.scss */
+  .cover__caption {
+    font-size: 16px;
+    margin-top: -65px;
+  }
+}
+
+@media (min-width: 1700px) {
+  /* line 133, sass/organisms/_cover.scss */
+  .cover__caption {
+    font-size: 16px;
+    margin-top: -117px;
+  }
+}
+
+/* line 152, sass/organisms/_cover.scss */
+.cover .proyect-item {
+  max-width: 240px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+}
+
+@media (min-width: 1024px) {
+  /* line 152, sass/organisms/_cover.scss */
+  .cover .proyect-item {
+    min-height: 500px;
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 1440px) {
+  /* line 152, sass/organisms/_cover.scss */
+  .cover .proyect-item {
+    max-width: 350px;
+  }
+}
+
+@media (min-width: 1700px) {
+  /* line 152, sass/organisms/_cover.scss */
+  .cover .proyect-item {
+    max-width: 400px;
+  }
+}
+
+/* line 169, sass/organisms/_cover.scss */
+.cover .proyect-item:first-child {
+  -webkit-transform: translate(-70%, -50%) rotate(3deg);
+  transform: translate(-70%, -50%) rotate(3deg);
+}
+
+/* line 172, sass/organisms/_cover.scss */
+.cover .proyect-item:nth-child(2) {
+  -webkit-transform: translate(-50%, -50%) rotate(-3deg);
+  transform: translate(-50%, -50%) rotate(-3deg);
+}
+
+/* line 175, sass/organisms/_cover.scss */
+.cover .proyect-item:last-child {
+  -webkit-transform: translate(-30%, -50%) rotate(2deg);
+  transform: translate(-30%, -50%) rotate(2deg);
+}
+
+/* line 178, sass/organisms/_cover.scss */
+.cover .proyect-item:first-child:hover {
+  -webkit-transform: translate(-70%, -50%) rotate(0);
+  transform: translate(-70%, -50%) rotate(0);
+  z-index: 4 !important;
+}
+
+/* line 181, sass/organisms/_cover.scss */
+.cover .proyect-item:first-child:hover .proyect-item__image {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+/* line 185, sass/organisms/_cover.scss */
+.cover .proyect-item:nth-child(2):hover {
+  -webkit-transform: translate(-50%, -50%) rotate(0);
+  transform: translate(-50%, -50%) rotate(0);
+  z-index: 4 !important;
+}
+
+/* line 188, sass/organisms/_cover.scss */
+.cover .proyect-item:nth-child(2):hover .proyect-item__image {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+/* line 192, sass/organisms/_cover.scss */
+.cover .proyect-item:last-child:hover {
+  -webkit-transform: translate(-30%, -50%) rotate(0);
+  transform: translate(-30%, -50%) rotate(0);
+  z-index: 4 !important;
+}
+
+/* line 195, sass/organisms/_cover.scss */
+.cover .proyect-item:last-child:hover .proyect-item__image {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+@media (min-width: 1024px) {
+  /* line 200, sass/organisms/_cover.scss */
+  .cover .proyect-item:first-child {
+    -webkit-transform: translate(-65%, -50%) rotate(3deg);
+    transform: translate(-65%, -50%) rotate(3deg);
+  }
+  /* line 203, sass/organisms/_cover.scss */
+  .cover .proyect-item:nth-child(2) {
+    -webkit-transform: translate(-40%, -50%) rotate(-3deg);
+    transform: translate(-40%, -50%) rotate(-3deg);
+  }
+  /* line 206, sass/organisms/_cover.scss */
+  .cover .proyect-item:last-child {
+    -webkit-transform: translate(-25%, -50%) rotate(2deg);
+    transform: translate(-25%, -50%) rotate(2deg);
+  }
+  /* line 209, sass/organisms/_cover.scss */
+  .cover .proyect-item:first-child:hover {
+    -webkit-transform: translate(-65%, -50%) rotate(0);
+    transform: translate(-65%, -50%) rotate(0);
+    z-index: 4 !important;
+  }
+  /* line 213, sass/organisms/_cover.scss */
+  .cover .proyect-item:nth-child(2):hover {
+    -webkit-transform: translate(-40%, -50%) rotate(0);
+    transform: translate(-40%, -50%) rotate(0);
+    z-index: 4 !important;
+  }
+  /* line 217, sass/organisms/_cover.scss */
+  .cover .proyect-item:last-child:hover {
+    -webkit-transform: translate(-25%, -50%) rotate(0);
+    transform: translate(-25%, -50%) rotate(0);
+    z-index: 4 !important;
   }
 }

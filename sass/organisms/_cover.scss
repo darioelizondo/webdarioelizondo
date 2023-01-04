@@ -40,6 +40,7 @@
 		}
 	}
 	&__inner-proyects {
+		opacity: 0;
 		min-height: 500px;
 		position: relative;
 	}
@@ -138,6 +139,7 @@
 		}
 	}
 	&__wrapper-caption {
+		opacity: 0;
 		text-align: center;
 	}
 	&__caption {
@@ -185,21 +187,24 @@
 		&:last-child {
 			transform:  translate( -30%,-50% ) rotate( 2deg );
 		}
-		&:first-child:hover {
+		&:first-child:hover,
+		&:first-child.active {
 			transform:  translate( -70%,-50% ) rotate( 0 );
 			z-index: 4 !important;
 			.proyect-item__image {
 				transform: scale(1.05);
 			}
 		}
-		&:nth-child( 2 ):hover {
+		&:nth-child( 2 ):hover,
+		&:nth-child( 2 ).active {
 			transform:  translate( -50%,-50% ) rotate( 0 );
 			z-index: 4 !important;
 			.proyect-item__image {
 				transform: scale(1.05);
 			}
 		}
-		&:last-child:hover {
+		&:last-child:hover,
+		&:last-child.active {
 			transform:  translate( -30%,-50% ) rotate( 0 );
 			z-index: 4 !important;
 			.proyect-item__image {
@@ -208,26 +213,47 @@
 		}
 		@include l {
 			&:first-child {
-				transform:  translate( -65%,-50% ) rotate( 3deg );
+				transform: translate( -65%,-50% ) rotate( 3deg );
 			}
 			&:nth-child( 2 ) {
-				transform:  translate( -40%,-50% ) rotate( -3deg );
+				transform: translate( -40%,-50% ) rotate( -3deg );
 			}
 			&:last-child {
-				transform:  translate( -25%,-50% ) rotate( 2deg );
+				transform: translate( -25%,-50% ) rotate( 2deg );
 			}
 			&:first-child:hover {
-				transform:  translate( -65%,-50% ) rotate( 0 );
+				transform: translate( -65%,-50% ) rotate( 0 );
 				z-index: 4 !important;
 			}
 			&:nth-child( 2 ):hover {
-				transform:  translate( -40%,-50% ) rotate( 0 );
+				transform: translate( -40%,-50% ) rotate( 0 );
 				z-index: 4 !important;
 			}
 			&:last-child:hover {
-				transform:  translate( -25%,-50% ) rotate( 0 );
+				transform: translate( -25%,-50% ) rotate( 0 );
 				z-index: 4 !important;
 			}
 		}
+		&.active {
+			z-index: 4 !important;
+		}
+	}
+	&__wrapper-arrows {
+		text-align: center;
+		@include l {
+			display: none;
+		}
+	}
+	&__arrow {
+		display: inline-block;
+		&:first-child {
+			margin-right: $lh*2;
+			transform: rotate( 180deg );
+		}
+	}
+	&__icon-arrow {
+		width: 35px;
+		height: 13px;
+		display: block;
 	}
 }

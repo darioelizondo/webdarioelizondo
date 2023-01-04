@@ -59,6 +59,14 @@ $group = get_sub_field( 'cover' );
                         endif;
                      ?>
                 </div>
+                <div class="cover__wrapper-arrows">
+                    <a id="arrowBack" class="cover__arrow" href="#">
+                        <img class="cover__icon-arrow" src="<?php echo TDU . '/images/svgs/arrow-right.svg'; ?>">
+                    </a>
+                    <a id="arrowNext" class="cover__arrow" href="#">
+                        <img class="cover__icon-arrow" src="<?php echo TDU . '/images/svgs/arrow-right.svg'; ?>">
+                    </a>
+                 </div>
             </div>
         </div>
     <?php endif ?>

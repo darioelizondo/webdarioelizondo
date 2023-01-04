@@ -11,7 +11,7 @@ $proyect_item = get_field( 'proyect', get_the_ID() );
 
  ?>
 
- <div class="proyect-item<?php if (isset( $count ) ) if( $count % 3 == 1 ) { echo ' ' . 'bg--secondary' . ' ' . 'border--secondary'; } elseif( $count % 3 == 2 ) { echo ' ' . 'bg--primary-dark' . ' ' . 'border--primary-dark'; } elseif( $count % 3 == 0 ) { echo  ' ' . 'bg--text' . ' ' . 'border--text'; } ?>" <?php if ( isset( $count_proyects ) ) echo 'style="z-index: ' . $count_proyects . ';"'; ?>>
+ <div <?php if( isset( $count ) ) echo 'id="' . 'proyectN--' . $count . '"'; ?> class="proyect-item<?php if (isset( $count ) ) if( $count % 3 == 1 ) { echo ' ' . 'bg--secondary' . ' ' . 'border--secondary'; } elseif( $count % 3 == 2 ) { echo ' ' . 'bg--primary-dark' . ' ' . 'border--primary-dark'; } elseif( $count % 3 == 0 ) { echo  ' ' . 'bg--text' . ' ' . 'border--text'; } ?>" <?php if ( isset( $count_proyects ) ) echo 'style="z-index: ' . $count_proyects . ';"'; ?>>
  	<?php if ( has_post_thumbnail() ): ?>
  		<div class="proyect-item__wrapper-image">
             <a class="proyect-item__link-image" href="<?php the_permalink(); ?>">

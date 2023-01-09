@@ -127,6 +127,7 @@ body {
   font-weight: 400;
   line-height: 26px;
   overflow: hidden;
+  background: #F5F8FF;
 }
 
 /* line 31, sass/@config/_base.scss */

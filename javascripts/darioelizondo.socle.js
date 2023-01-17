@@ -2,15 +2,8 @@ document.addEventListener( 'DOMContentLoaded', textTyping, false );
 
 function textTyping() {
 
-	let textTyping = [];
-	let fieldTyping = document.querySelectorAll( '.socle-field p' );
-
-	fieldTyping.forEach( (element) => {
-		item = element.innerHTML;
-		textTyping.push( item );
-	} )
-
-	console.log( textTyping );
+	let fieldTyping = document.getElementById( 'socleTitle' ).dataset.title;
+	let textTyping = fieldTyping.split( ',' );
 
 	const typing = new TypeIt( '#socleTitle', {
 		strings: textTyping,

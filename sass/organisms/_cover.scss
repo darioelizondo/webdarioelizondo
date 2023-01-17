@@ -26,6 +26,7 @@
 	&__wrapper-proyects {
 		position: relative;
 		@include l {
+			margin-top: -54px;
 			min-height: 600px;
 			flex: 0 0 50%;
 			display: flex;
@@ -35,6 +36,7 @@
 			// flex-wrap: wrap;
 		}
 		@include xxl {
+			margin-top: -83px;
 			min-height: 700px;
 			flex: 0 0 60%;
 		}
@@ -47,10 +49,12 @@
 	&__wrapper-content {
 		padding-top: $lh * 2;
 		@include l {
+			margin-top: -54px;
 			flex: 0 0 50%;
 			padding-top: 0;
 		}
 		@include xxl {
+			margin-top: -83px;
 			flex: 0 0 40%
 		}
 	}

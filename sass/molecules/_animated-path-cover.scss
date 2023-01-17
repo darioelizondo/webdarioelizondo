@@ -2,11 +2,17 @@
 	overflow: hidden;
 	font-size: 0;
 	line-height: 1;
+	// @include l {
+	// 	max-height: calc( 100vh - 54px );
+	// }
+	// @include xxl {
+	// 	max-height: calc( 100vh - 83px );
+	// }
 	@include l {
-		max-height: calc( 100vh - 54px );
+		max-height: 100vh;
 	}
 	@include xxl {
-		max-height: calc( 100vh - 83px );
+		max-height: 100vh;
 	}
 	&__svg {
 		height: 900px;

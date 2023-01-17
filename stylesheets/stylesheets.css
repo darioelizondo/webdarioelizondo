@@ -1163,24 +1163,24 @@ body:before {
 @media (min-width: 1024px) {
   /* line 1, sass/molecules/_animated-path-cover.scss */
   .animated-path-cover {
-    max-height: calc( 100vh - 54px);
+    max-height: 100vh;
   }
 }
 
 @media (min-width: 1700px) {
   /* line 1, sass/molecules/_animated-path-cover.scss */
   .animated-path-cover {
-    max-height: calc( 100vh - 83px);
+    max-height: 100vh;
   }
 }
 
-/* line 11, sass/molecules/_animated-path-cover.scss */
+/* line 17, sass/molecules/_animated-path-cover.scss */
 .animated-path-cover__svg {
   height: 900px;
 }
 
 @media (min-width: 1024px) {
-  /* line 11, sass/molecules/_animated-path-cover.scss */
+  /* line 17, sass/molecules/_animated-path-cover.scss */
   .animated-path-cover__svg {
     height: auto;
   }
@@ -1740,6 +1740,7 @@ body.admin-bar .header {
 @media (min-width: 1024px) {
   /* line 26, sass/organisms/_cover.scss */
   .cover__wrapper-proyects {
+    margin-top: -54px;
     min-height: 600px;
     -webkit-box-flex: 0;
     flex: 0 0 50%;
@@ -1756,27 +1757,29 @@ body.admin-bar .header {
 @media (min-width: 1700px) {
   /* line 26, sass/organisms/_cover.scss */
   .cover__wrapper-proyects {
+    margin-top: -83px;
     min-height: 700px;
     -webkit-box-flex: 0;
     flex: 0 0 60%;
   }
 }
 
-/* line 42, sass/organisms/_cover.scss */
+/* line 44, sass/organisms/_cover.scss */
 .cover__inner-proyects {
   opacity: 0;
   min-height: 500px;
   position: relative;
 }
 
-/* line 47, sass/organisms/_cover.scss */
+/* line 49, sass/organisms/_cover.scss */
 .cover__wrapper-content {
   padding-top: 52px;
 }
 
 @media (min-width: 1024px) {
-  /* line 47, sass/organisms/_cover.scss */
+  /* line 49, sass/organisms/_cover.scss */
   .cover__wrapper-content {
+    margin-top: -54px;
     -webkit-box-flex: 0;
     flex: 0 0 50%;
     padding-top: 0;
@@ -1784,33 +1787,34 @@ body.admin-bar .header {
 }
 
 @media (min-width: 1700px) {
-  /* line 47, sass/organisms/_cover.scss */
+  /* line 49, sass/organisms/_cover.scss */
   .cover__wrapper-content {
+    margin-top: -83px;
     -webkit-box-flex: 0;
     flex: 0 0 40%;
   }
 }
 
 @media (min-width: 640px) {
-  /* line 57, sass/organisms/_cover.scss */
+  /* line 61, sass/organisms/_cover.scss */
   .cover__content {
     text-align: center;
   }
 }
 
 @media (min-width: 1024px) {
-  /* line 57, sass/organisms/_cover.scss */
+  /* line 61, sass/organisms/_cover.scss */
   .cover__content {
     text-align: left;
   }
 }
 
-/* line 65, sass/organisms/_cover.scss */
+/* line 69, sass/organisms/_cover.scss */
 .cover__title {
   padding-bottom: 26px;
 }
 
-/* line 68, sass/organisms/_cover.scss */
+/* line 72, sass/organisms/_cover.scss */
 .cover__title p {
   color: #ffffff;
   font-size: 52px;
@@ -1822,7 +1826,7 @@ body.admin-bar .header {
 }
 
 @media (min-width: 1024px) {
-  /* line 68, sass/organisms/_cover.scss */
+  /* line 72, sass/organisms/_cover.scss */
   .cover__title p {
     font-size: 95px;
     line-height: 95px;
@@ -1830,7 +1834,7 @@ body.admin-bar .header {
 }
 
 @media (min-width: 1440px) {
-  /* line 68, sass/organisms/_cover.scss */
+  /* line 72, sass/organisms/_cover.scss */
   .cover__title p {
     font-size: 100px;
     line-height: 105px;
@@ -1838,26 +1842,26 @@ body.admin-bar .header {
 }
 
 @media (min-width: 1700px) {
-  /* line 68, sass/organisms/_cover.scss */
+  /* line 72, sass/organisms/_cover.scss */
   .cover__title p {
     font-size: 110px;
     line-height: 105px;
   }
 }
 
-/* line 91, sass/organisms/_cover.scss */
+/* line 95, sass/organisms/_cover.scss */
 .cover__line {
   display: inline-block;
   -webkit-transform: translateY(-500px);
   transform: translateY(-500px);
 }
 
-/* line 95, sass/organisms/_cover.scss */
+/* line 99, sass/organisms/_cover.scss */
 .cover__line-featured {
   color: #FCFF6B;
 }
 
-/* line 98, sass/organisms/_cover.scss */
+/* line 102, sass/organisms/_cover.scss */
 .cover__link {
   display: -webkit-box;
   display: flex;
@@ -1873,21 +1877,21 @@ body.admin-bar .header {
   transition: transform .3s ease, -webkit-transform .3s ease;
 }
 
-/* line 106, sass/organisms/_cover.scss */
+/* line 110, sass/organisms/_cover.scss */
 .cover__link:hover {
   -webkit-transform: translateX(15px);
   transform: translateX(15px);
 }
 
 @media (min-width: 640px) {
-  /* line 98, sass/organisms/_cover.scss */
+  /* line 102, sass/organisms/_cover.scss */
   .cover__link {
     display: block;
   }
 }
 
 @media (min-width: 1024px) {
-  /* line 98, sass/organisms/_cover.scss */
+  /* line 102, sass/organisms/_cover.scss */
   .cover__link {
     display: inline-block;
     font-size: 22px;
@@ -1896,7 +1900,7 @@ body.admin-bar .header {
 }
 
 @media (min-width: 1440px) {
-  /* line 98, sass/organisms/_cover.scss */
+  /* line 102, sass/organisms/_cover.scss */
   .cover__link {
     display: inline-block;
     font-size: 24px;
@@ -1905,7 +1909,7 @@ body.admin-bar .header {
 }
 
 @media (min-width: 1700px) {
-  /* line 98, sass/organisms/_cover.scss */
+  /* line 102, sass/organisms/_cover.scss */
   .cover__link {
     display: inline-block;
     font-size: 26px;
@@ -1913,13 +1917,13 @@ body.admin-bar .header {
   }
 }
 
-/* line 128, sass/organisms/_cover.scss */
+/* line 132, sass/organisms/_cover.scss */
 .cover__link-text {
   display: inline-block;
   margin-right: 26px;
 }
 
-/* line 132, sass/organisms/_cover.scss */
+/* line 136, sass/organisms/_cover.scss */
 .cover__link-icon {
   width: 40px;
   height: 14px;
@@ -1927,20 +1931,20 @@ body.admin-bar .header {
 }
 
 @media (min-width: 1024px) {
-  /* line 132, sass/organisms/_cover.scss */
+  /* line 136, sass/organisms/_cover.scss */
   .cover__link-icon {
     width: 49px;
     height: 18px;
   }
 }
 
-/* line 141, sass/organisms/_cover.scss */
+/* line 145, sass/organisms/_cover.scss */
 .cover__wrapper-caption {
   opacity: 0;
   text-align: center;
 }
 
-/* line 145, sass/organisms/_cover.scss */
+/* line 149, sass/organisms/_cover.scss */
 .cover__caption {
   color: #ffffff;
   margin-top: 52px;
@@ -1949,7 +1953,7 @@ body.admin-bar .header {
 }
 
 @media (min-width: 1024px) {
-  /* line 145, sass/organisms/_cover.scss */
+  /* line 149, sass/organisms/_cover.scss */
   .cover__caption {
     font-size: 15px;
     line-height: 1;
@@ -1958,7 +1962,7 @@ body.admin-bar .header {
 }
 
 @media (min-width: 1440px) {
-  /* line 145, sass/organisms/_cover.scss */
+  /* line 149, sass/organisms/_cover.scss */
   .cover__caption {
     font-size: 16px;
     margin-top: -65px;
@@ -1966,14 +1970,14 @@ body.admin-bar .header {
 }
 
 @media (min-width: 1700px) {
-  /* line 145, sass/organisms/_cover.scss */
+  /* line 149, sass/organisms/_cover.scss */
   .cover__caption {
     font-size: 16px;
     margin-top: -117px;
   }
 }
 
-/* line 164, sass/organisms/_cover.scss */
+/* line 168, sass/organisms/_cover.scss */
 .cover .proyect-item {
   max-width: 240px;
   position: absolute;
@@ -1988,7 +1992,7 @@ body.admin-bar .header {
 }
 
 @media (min-width: 1024px) {
-  /* line 164, sass/organisms/_cover.scss */
+  /* line 168, sass/organisms/_cover.scss */
   .cover .proyect-item {
     min-height: 500px;
     max-width: 300px;
@@ -1996,105 +2000,105 @@ body.admin-bar .header {
 }
 
 @media (min-width: 1440px) {
-  /* line 164, sass/organisms/_cover.scss */
+  /* line 168, sass/organisms/_cover.scss */
   .cover .proyect-item {
     max-width: 350px;
   }
 }
 
 @media (min-width: 1700px) {
-  /* line 164, sass/organisms/_cover.scss */
+  /* line 168, sass/organisms/_cover.scss */
   .cover .proyect-item {
     max-width: 400px;
   }
 }
 
-/* line 181, sass/organisms/_cover.scss */
+/* line 185, sass/organisms/_cover.scss */
 .cover .proyect-item:first-child {
   -webkit-transform: translate(-70%, -50%) rotate(3deg);
   transform: translate(-70%, -50%) rotate(3deg);
 }
 
-/* line 184, sass/organisms/_cover.scss */
+/* line 188, sass/organisms/_cover.scss */
 .cover .proyect-item:nth-child(2) {
   -webkit-transform: translate(-50%, -50%) rotate(-3deg);
   transform: translate(-50%, -50%) rotate(-3deg);
 }
 
-/* line 187, sass/organisms/_cover.scss */
+/* line 191, sass/organisms/_cover.scss */
 .cover .proyect-item:last-child {
   -webkit-transform: translate(-30%, -50%) rotate(2deg);
   transform: translate(-30%, -50%) rotate(2deg);
 }
 
-/* line 190, sass/organisms/_cover.scss */
+/* line 194, sass/organisms/_cover.scss */
 .cover .proyect-item:first-child:hover, .cover .proyect-item:first-child.active {
   -webkit-transform: translate(-70%, -50%) rotate(0);
   transform: translate(-70%, -50%) rotate(0);
   z-index: 4 !important;
 }
 
-/* line 194, sass/organisms/_cover.scss */
+/* line 198, sass/organisms/_cover.scss */
 .cover .proyect-item:first-child:hover .proyect-item__image, .cover .proyect-item:first-child.active .proyect-item__image {
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
 }
 
-/* line 198, sass/organisms/_cover.scss */
+/* line 202, sass/organisms/_cover.scss */
 .cover .proyect-item:nth-child(2):hover, .cover .proyect-item:nth-child(2).active {
   -webkit-transform: translate(-50%, -50%) rotate(0);
   transform: translate(-50%, -50%) rotate(0);
   z-index: 4 !important;
 }
 
-/* line 202, sass/organisms/_cover.scss */
+/* line 206, sass/organisms/_cover.scss */
 .cover .proyect-item:nth-child(2):hover .proyect-item__image, .cover .proyect-item:nth-child(2).active .proyect-item__image {
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
 }
 
-/* line 206, sass/organisms/_cover.scss */
+/* line 210, sass/organisms/_cover.scss */
 .cover .proyect-item:last-child:hover, .cover .proyect-item:last-child.active {
   -webkit-transform: translate(-30%, -50%) rotate(0);
   transform: translate(-30%, -50%) rotate(0);
   z-index: 4 !important;
 }
 
-/* line 210, sass/organisms/_cover.scss */
+/* line 214, sass/organisms/_cover.scss */
 .cover .proyect-item:last-child:hover .proyect-item__image, .cover .proyect-item:last-child.active .proyect-item__image {
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
 }
 
 @media (min-width: 1024px) {
-  /* line 215, sass/organisms/_cover.scss */
+  /* line 219, sass/organisms/_cover.scss */
   .cover .proyect-item:first-child {
     -webkit-transform: translate(-65%, -50%) rotate(3deg);
     transform: translate(-65%, -50%) rotate(3deg);
   }
-  /* line 218, sass/organisms/_cover.scss */
+  /* line 222, sass/organisms/_cover.scss */
   .cover .proyect-item:nth-child(2) {
     -webkit-transform: translate(-40%, -50%) rotate(-3deg);
     transform: translate(-40%, -50%) rotate(-3deg);
   }
-  /* line 221, sass/organisms/_cover.scss */
+  /* line 225, sass/organisms/_cover.scss */
   .cover .proyect-item:last-child {
     -webkit-transform: translate(-25%, -50%) rotate(2deg);
     transform: translate(-25%, -50%) rotate(2deg);
   }
-  /* line 224, sass/organisms/_cover.scss */
+  /* line 228, sass/organisms/_cover.scss */
   .cover .proyect-item:first-child:hover {
     -webkit-transform: translate(-65%, -50%) rotate(0);
     transform: translate(-65%, -50%) rotate(0);
     z-index: 4 !important;
   }
-  /* line 228, sass/organisms/_cover.scss */
+  /* line 232, sass/organisms/_cover.scss */
   .cover .proyect-item:nth-child(2):hover {
     -webkit-transform: translate(-40%, -50%) rotate(0);
     transform: translate(-40%, -50%) rotate(0);
     z-index: 4 !important;
   }
-  /* line 232, sass/organisms/_cover.scss */
+  /* line 236, sass/organisms/_cover.scss */
   .cover .proyect-item:last-child:hover {
     -webkit-transform: translate(-25%, -50%) rotate(0);
     transform: translate(-25%, -50%) rotate(0);
@@ -2102,44 +2106,165 @@ body.admin-bar .header {
   }
 }
 
-/* line 237, sass/organisms/_cover.scss */
+/* line 241, sass/organisms/_cover.scss */
 .cover .proyect-item.active {
   z-index: 4 !important;
 }
 
-/* line 241, sass/organisms/_cover.scss */
+/* line 245, sass/organisms/_cover.scss */
 .cover__wrapper-arrows {
   text-align: center;
 }
 
 @media (min-width: 1024px) {
-  /* line 241, sass/organisms/_cover.scss */
+  /* line 245, sass/organisms/_cover.scss */
   .cover__wrapper-arrows {
     display: none;
   }
 }
 
-/* line 247, sass/organisms/_cover.scss */
+/* line 251, sass/organisms/_cover.scss */
 .cover__arrow {
   display: inline-block;
 }
 
-/* line 249, sass/organisms/_cover.scss */
+/* line 253, sass/organisms/_cover.scss */
 .cover__arrow:first-child {
   margin-right: 52px;
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
-/* line 254, sass/organisms/_cover.scss */
+/* line 258, sass/organisms/_cover.scss */
 .cover__icon-arrow {
   width: 35px;
   height: 13px;
   display: block;
 }
 
-/* line 1, sass/organisms/_socle.scss */
-.socle {
-  background: #FCFF6B;
-  height: 500px;
+/* line 2, sass/organisms/_socle.scss */
+.socle__inner {
+  margin-top: -30px;
+  position: relative;
+  z-index: 3;
+}
+
+@media (min-width: 1024px) {
+  /* line 2, sass/organisms/_socle.scss */
+  .socle__inner {
+    margin-top: -30px;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(75px, 1fr));
+    grid-column-gap: 26px;
+  }
+}
+
+@media (min-width: 1440px) {
+  /* line 2, sass/organisms/_socle.scss */
+  .socle__inner {
+    margin-top: -50px;
+  }
+}
+
+@media (min-width: 1700px) {
+  /* line 2, sass/organisms/_socle.scss */
+  .socle__inner {
+    margin-top: -75px;
+  }
+}
+
+/* line 19, sass/organisms/_socle.scss */
+.socle__wrapper {
+  width: 90%;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 26px;
+}
+
+@media (min-width: 1024px) {
+  /* line 19, sass/organisms/_socle.scss */
+  .socle__wrapper {
+    width: 100%;
+    grid-column: 5 / 13;
+    padding: 39px;
+  }
+}
+
+@media (min-width: 1440px) {
+  /* line 19, sass/organisms/_socle.scss */
+  .socle__wrapper {
+    padding: 52px;
+  }
+}
+
+/* line 33, sass/organisms/_socle.scss */
+.socle__wrapper-title {
+  padding-bottom: 17.33333px;
+}
+
+/* line 36, sass/organisms/_socle.scss */
+.socle__pretitle, .socle__title {
+  display: inline-block;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 500;
+}
+
+@media (min-width: 1024px) {
+  /* line 36, sass/organisms/_socle.scss */
+  .socle__pretitle, .socle__title {
+    font-size: 42px;
+    line-height: 46px;
+  }
+}
+
+@media (min-width: 1440px) {
+  /* line 36, sass/organisms/_socle.scss */
+  .socle__pretitle, .socle__title {
+    font-size: 50px;
+    line-height: 54px;
+  }
+}
+
+@media (min-width: 1700px) {
+  /* line 36, sass/organisms/_socle.scss */
+  .socle__pretitle, .socle__title {
+    font-size: 55px;
+    line-height: 59px;
+  }
+}
+
+/* line 55, sass/organisms/_socle.scss */
+.socle__pretitle {
+  margin-right: 8.66667px;
+}
+
+/* line 58, sass/organisms/_socle.scss */
+.socle__text {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+@media (min-width: 1024px) {
+  /* line 58, sass/organisms/_socle.scss */
+  .socle__text {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+@media (min-width: 1440px) {
+  /* line 58, sass/organisms/_socle.scss */
+  .socle__text {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+
+@media (min-width: 1700px) {
+  /* line 58, sass/organisms/_socle.scss */
+  .socle__text {
+    font-size: 26px;
+    line-height: 30px;
+  }
 }

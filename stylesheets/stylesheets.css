@@ -365,13 +365,13 @@ body:before {
   color: white;
   display: -webkit-box;
   display: flex;
-  height: 20px;
+  width: 40px;
+  height: 36px;
   -webkit-box-pack: center;
   justify-content: center;
   position: fixed;
   right: 0;
   top: 0;
-  width: 20px;
   z-index: 999999;
 }
 
@@ -401,6 +401,17 @@ body:before {
   body:before {
     content: 'XXL';
   }
+}
+
+/* line 223, sass/@config/_base.scss */
+#resolution {
+  position: fixed;
+  top: 0;
+  right: 50px;
+  color: #ffffff;
+  background: #000000;
+  padding: 5px 10px;
+  z-index: 999999;
 }
 
 /* line 2, sass/@config/_color.scss */

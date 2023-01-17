@@ -11,6 +11,15 @@
   wp_enqueue_script( 'typeit.js' );
   wp_enqueue_script( 'darioelizondo.socle' );
 
+  echo $group[ 'title' ];
+  // $data_content = [];
+
+  // foreach (  as $title ) {
+  //   $data_content .= $title;
+  // }
+
+  // print_r($data_content);
+
  ?>
 
  <div class="socle-field">

@@ -19,5 +19,6 @@
 <?php wp_head(); ?>
 
 <body <?php body_class(); ?>>
+    <div id="resolution"></div>
     <main class="main">
         <?php include TD . '/parts/organisms/header.php'; ?>

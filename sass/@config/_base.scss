@@ -194,19 +194,18 @@ button:focus {
 	border: none;
 }
 
-body:before
-{
+body:before {
 	align-items: center;
 	background: black;
 	content: 'S';
 	color: white;
 	display: flex;
-	height: 20px;
+	width: 40px;
+	height: 36px;
 	justify-content: center;
 	position: fixed;
 	right: 0;
 	top: 0;
-	width: 20px;
 	z-index: 999999;
 	// @include a { content: 'A'; }
 	// @include b { content: 'B'; }
@@ -215,9 +214,18 @@ body:before
 	// @include e { content: 'E'; }
 	// @include f { content: 'F'; }
 	// @include g { content: 'G'; }
-
 	@include m { content: 'M'; }
 	@include l { content: 'L'; }
 	@include xl { content: 'XL'; }
 	@include xxl { content: 'XXL'; }
+}
+
+#resolution {
+	position: fixed;
+	top: 0;
+	right: 50px;
+	color: #ffffff;
+	background: #000000;
+	padding: 5px 10px;
+	z-index: 999999;
 }

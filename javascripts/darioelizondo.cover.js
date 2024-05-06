@@ -3,6 +3,7 @@ const breakpoint = window.matchMedia( '(max-width:1024px)' );
 document.addEventListener( 'DOMContentLoaded', onLoadAnimeTextCover(), false );
 document.addEventListener( 'DOMContentLoaded', onLoadAnimeProyectsCover(), false );
 document.addEventListener( 'DOMContentLoaded', breakPointChecker(), false );
+document.addEventListener( 'DOMContentLoaded', sliderProjects() ,false );
 
 breakpoint.addListener( breakPointChecker );
 
@@ -135,6 +136,21 @@ function sliderProjectsHomeMobile() {
 
 		e.preventDefault();
 
+	});
+
+}
+
+function sliderProjects() {
+
+	const projects = document.querySelectorAll( '.cover__inner-proyects .proyect-item' );
+
+	projects.forEach( ( item ) => {
+		item.addEventListener( 'mouseover', () => {
+			item.classList.add( 'bringToTheFront' );
+		});
+		item.addEventListener( 'mouseleave', () => {
+			item.classList.remove( 'bringToTheFront' );
+		});
 	});
 
 }

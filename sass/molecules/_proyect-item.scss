@@ -8,6 +8,9 @@
 	}
 	&__content {
 		padding: $lh / 2;
+		@include l {
+			padding: $lh / 2 $lh;
+		}
 	}
 	&__title {
 		color: $white;

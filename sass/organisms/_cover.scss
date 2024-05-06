@@ -172,6 +172,8 @@
 		left: 50%;
 		transform: translate( -50%,-50% );
 		transition: transform .3s ease;
+		border-radius: 15px;
+		overflow: hidden;
 		@include l {
 			min-height: 500px;
 			max-width: 300px;
@@ -183,7 +185,7 @@
 			max-width: 400px;
 		}
 		&:first-child {
-			transform:  translate( -70%,-50% ) rotate( 3deg );
+			transform:  translate( -65%,-50% ) rotate( 3deg );
 		}
 		&:nth-child( 2 ) {
 			transform:  translate( -50%,-50% ) rotate( -3deg );
@@ -193,24 +195,21 @@
 		}
 		&:first-child:hover,
 		&:first-child.active {
-			transform:  translate( -70%,-50% ) rotate( 0 );
-			z-index: 4 !important;
+			transform:  translate( -75%,-47% ) rotate( -2deg );
 			.proyect-item__image {
 				transform: scale(1.05);
 			}
 		}
 		&:nth-child( 2 ):hover,
 		&:nth-child( 2 ).active {
-			transform:  translate( -50%,-50% ) rotate( 0 );
-			z-index: 4 !important;
+			transform:  translate( -50%,-40% ) rotate( 0 );
 			.proyect-item__image {
 				transform: scale(1.05);
 			}
 		}
 		&:last-child:hover,
 		&:last-child.active {
-			transform:  translate( -30%,-50% ) rotate( 0 );
-			z-index: 4 !important;
+			transform:  translate( -20%,-50% ) rotate( 0 );
 			.proyect-item__image {
 				transform: scale(1.05);
 			}
@@ -226,19 +225,24 @@
 				transform: translate( -25%,-50% ) rotate( 2deg );
 			}
 			&:first-child:hover {
-				transform: translate( -65%,-50% ) rotate( 0 );
-				z-index: 4 !important;
+				transform: translate( -75%,-50% ) rotate( 0 );
+
 			}
 			&:nth-child( 2 ):hover {
-				transform: translate( -40%,-50% ) rotate( 0 );
-				z-index: 4 !important;
+				transform: translate( -40%,-60% ) rotate( 0 );
+
 			}
 			&:last-child:hover {
-				transform: translate( -25%,-50% ) rotate( 0 );
-				z-index: 4 !important;
+				transform: translate( 0%,-50% ) rotate( 0 );
+
 			}
 		}
+
 		&.active {
+			z-index: 4 !important;
+		}
+
+		&.bringToTheFront {
 			z-index: 4 !important;
 		}
 	}

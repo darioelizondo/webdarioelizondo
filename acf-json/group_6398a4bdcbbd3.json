@@ -1,0 +1,143 @@
+{
+    "key": "group_6398a4bdcbbd3",
+    "title": "@Modules",
+    "fields": [
+        {
+            "key": "field_6398a4c9df7ed",
+            "label": "Modules",
+            "name": "modules",
+            "aria-label": "",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_6398a4edc0373": {
+                    "key": "layout_6398a4edc0373",
+                    "name": "cover",
+                    "label": "Cover",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6398a84442fbc",
+                            "label": "Cover",
+                            "name": "cover",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_6398a4f5e667b"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_63bb7f4271bff": {
+                    "key": "layout_63bb7f4271bff",
+                    "name": "socle",
+                    "label": "Socle",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_63bb7f4571c00",
+                            "label": "Socle",
+                            "name": "socle",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_63bb7da491e04"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_663d7240ab2bd": {
+                    "key": "layout_663d7240ab2bd",
+                    "name": "about_me",
+                    "label": "About me",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_663d7249ab2c0",
+                            "label": "About me",
+                            "name": "about_me",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_663d660ce2675"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "min": "",
+            "max": "",
+            "button_label": "Add Row"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1715303046
+}

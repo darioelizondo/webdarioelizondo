@@ -1,0 +1,1 @@
+export const animateText=()=>{document.querySelectorAll(".about-me__text").forEach((e=>{e.querySelectorAll(".about-me__main-line").forEach(((e,t)=>{setTimeout((()=>{e.classList.add("active")}),200*(t+1))}))}))};

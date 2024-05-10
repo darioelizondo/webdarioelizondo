@@ -110,6 +110,10 @@
 		&:hover {
 			transform: translateX(15px);
 		}
+		&:hover .cover__link-text::before {
+			opacity: 1;
+			left: -18px;
+		}
 		@include m {
 			display: block;
 		}
@@ -132,6 +136,18 @@
 	&__link-text {
 		display: inline-block;
 		margin-right: $lh;
+		&::before {
+			content: '';
+			width: 10px;
+			height: 4px;
+			position: absolute;
+			top: 50%;
+			left: 10px;
+			opacity: 0;
+			transform: translateY( -50% );
+			background-color: $secondary;
+			transition: left .4s cubic-bezier(.77,0,.175,1), opacity .4s cubic-bezier(.785,.135,.15,.86);
+		}
 	}
 	&__link-icon {
 		width: 40px;

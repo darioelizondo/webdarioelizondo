@@ -1,0 +1,1 @@
+function textTyping(){let e=document.getElementById("socleTitle").dataset.title.split(",");new TypeIt("#socleTitle",{strings:e,breakLines:!1,lifeLike:!0,loop:!0}).go()}document.addEventListener("DOMContentLoaded",textTyping,!1);

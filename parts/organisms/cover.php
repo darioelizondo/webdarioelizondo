@@ -23,7 +23,7 @@ $group = get_sub_field( 'cover' );
                         <?php echo $group[ 'text' ]; ?>
                     </h1>
                     <a id="linkCover" class="cover__link" href="<?php echo esc_attr( $group[ 'button' ] ); ?>">
-                        <span class="cover__link-text"><?php echo esc_html( $group[ 'button_text' ] ); ?></span><img class="cover__link-icon" src="<?php echo TDU . '/images/svgs/arrow-right.svg'; ?>">
+                        <span class="cover__link-text"><?php echo esc_html( $group[ 'button_text' ] ); ?></span>
                     </a>
                 </div>
             </div>
